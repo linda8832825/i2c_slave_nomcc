@@ -1704,64 +1704,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! && ! != -> . . _SSP1STATbits 0 5 `i -> 0 `i ! != -> . . _SSP1STATbits 0 2 `i -> 0 `i 1565  ]
 {
 "21
-[; ;i2c_slave.c: 21:     RA1=1;
-[e = _RA1 -> -> 1 `i `b ]
-"22
-[; ;i2c_slave.c: 22:       z = SSP1BUF;
-[e = _z _SSP1BUF ]
-"23
-[; ;i2c_slave.c: 23:       while(!SSP1STATbits.BF);
+[; ;i2c_slave.c: 21:       while(!SSP1STATbits.BF);
 [e $U 1566  ]
 [e :U 1567 ]
 [e :U 1566 ]
 [e $ ! != -> . . _SSP1STATbits 0 0 `i -> 0 `i 1567  ]
 [e :U 1568 ]
-"25
-[; ;i2c_slave.c: 25:       SSP1CON1bits.CKP = 1;
-[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
+"22
+[; ;i2c_slave.c: 22:       RA1=SSP1BUF;
+[e = _RA1 -> _SSP1BUF `b ]
+"24
+[; ;i2c_slave.c: 24:           RA1=1;
+[e = _RA1 -> -> 1 `i `b ]
 "26
-[; ;i2c_slave.c: 26:     }
+[; ;i2c_slave.c: 26:       SSP1CON1bits.CKP = 1;
+[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
+"27
+[; ;i2c_slave.c: 27:     }
 }
 [e $U 1569  ]
-"27
-[; ;i2c_slave.c: 27:     else if(!SSP1STATbits.D_nA && SSP1STATbits.R_nW)
+"28
+[; ;i2c_slave.c: 28:     else if(!SSP1STATbits.D_nA && SSP1STATbits.R_nW)
 [e :U 1565 ]
 [e $ ! && ! != -> . . _SSP1STATbits 0 5 `i -> 0 `i != -> . . _SSP1STATbits 0 2 `i -> 0 `i 1570  ]
-"28
-[; ;i2c_slave.c: 28:     {
-{
 "29
-[; ;i2c_slave.c: 29:       z = SSP1BUF;
-[e = _z _SSP1BUF ]
+[; ;i2c_slave.c: 29:     {
+{
 "30
-[; ;i2c_slave.c: 30:       SSP1STATbits.BF = 0;
-[e = . . _SSP1STATbits 0 0 -> -> 0 `i `uc ]
+[; ;i2c_slave.c: 30:       z = SSP1BUF;
+[e = _z _SSP1BUF ]
 "31
-[; ;i2c_slave.c: 31:       SSP1BUF = PORTA ;
-[e = _SSP1BUF _PORTA ]
+[; ;i2c_slave.c: 31:       SSP1STATbits.BF = 0;
+[e = . . _SSP1STATbits 0 0 -> -> 0 `i `uc ]
 "32
-[; ;i2c_slave.c: 32:       SSP1CON1bits.CKP = 1;
-[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
+[; ;i2c_slave.c: 32:       SSP1BUF = PORTA ;
+[e = _SSP1BUF _PORTA ]
 "33
-[; ;i2c_slave.c: 33:       while(SSP1STATbits.BF);
+[; ;i2c_slave.c: 33:       SSP1CON1bits.CKP = 1;
+[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
+"34
+[; ;i2c_slave.c: 34:       while(SSP1STATbits.BF);
 [e $U 1571  ]
 [e :U 1572 ]
 [e :U 1571 ]
 [e $ != -> . . _SSP1STATbits 0 0 `i -> 0 `i 1572  ]
 [e :U 1573 ]
-"34
-[; ;i2c_slave.c: 34:     }
+"35
+[; ;i2c_slave.c: 35:     }
 }
 [e :U 1570 ]
 [e :U 1569 ]
-"36
-[; ;i2c_slave.c: 36:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
 "37
-[; ;i2c_slave.c: 37:   }
+[; ;i2c_slave.c: 37:     PIR3bits.SSP1IF = 0;
+[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+"38
+[; ;i2c_slave.c: 38:   }
 }
 [e :U 1563 ]
-"38
-[; ;i2c_slave.c: 38: }
+"39
+[; ;i2c_slave.c: 39: }
 [e :UE 1562 ]
 }

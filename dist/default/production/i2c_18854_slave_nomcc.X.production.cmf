@@ -12,19 +12,19 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\i2c_18854_slave_nomcc.X.production.o
-cinit CODE 0 4D 4D 5 2
-text1 CODE 0 8D 8D D 2
-text2 CODE 0 78 78 15 2
-text3 CODE 0 A3 A3 8 2
-text4 CODE 0 52 52 26 2
-text5 CODE 0 9A 9A 9 2
-maintext CODE 0 AB AB 6 2
+cinit CODE 0 50 50 5 2
+text1 CODE 0 9D 9D D 2
+text2 CODE 0 89 89 14 2
+text3 CODE 0 B3 B3 8 2
+text4 CODE 0 55 55 34 2
+text5 CODE 0 AA AA 9 2
+maintext CODE 0 BB BB 6 2
 cstackCOMMON COMMON 1 71 71 1 1
-intentry CODE 0 4 4 47 2
+intentry CODE 0 4 4 4A 2
 bssCOMMON COMMON 1 70 70 1 1
-$C:\Users\linda\AppData\Local\Temp\s9vo.o
+$C:\Users\linda\AppData\Local\Temp\sapc.o
 reset_vec CODE 0 0 0 2 2
-end_init CODE 0 4B 4B 2 2
+end_init CODE 0 4E 4E 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -46,9 +46,9 @@ BANK4 220-26F 1
 BANK5 2A0-2EF 1
 BANK6 320-32F 1
 CONST 2-3 2
-CONST B1-FFF 2
+CONST C1-FFF 2
 ENTRY 2-3 2
-ENTRY B1-FFF 2
+ENTRY C1-FFF 2
 IDLOC 8000-8003 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -74,7 +74,7 @@ SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 2000-21EF 1
 CODE 2-3 2
-CODE B1-FFF 2
+CODE C1-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -90,9 +90,9 @@ COMMON 72-7D 1
 CONFIG 8007-800B 2
 EEDATA F000-F0FF 2
 STRCODE 2-3 2
-STRCODE B1-FFF 2
+STRCODE C1-FFF 2
 STRING 2-3 2
-STRING B1-FFF 2
+STRING C1-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -107,13 +107,13 @@ STRING B1-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\i2c_18854_slave_nomcc.X.production.o
-4D cinit CODE >4348:C:\Users\linda\AppData\Local\Temp\s9vo.s
-4D cinit CODE >4351:C:\Users\linda\AppData\Local\Temp\s9vo.s
-4D cinit CODE >4363:C:\Users\linda\AppData\Local\Temp\s9vo.s
-4E cinit CODE >4369:C:\Users\linda\AppData\Local\Temp\s9vo.s
-4E cinit CODE >4371:C:\Users\linda\AppData\Local\Temp\s9vo.s
-4F cinit CODE >4372:C:\Users\linda\AppData\Local\Temp\s9vo.s
-50 cinit CODE >4373:C:\Users\linda\AppData\Local\Temp\s9vo.s
+50 cinit CODE >4358:C:\Users\linda\AppData\Local\Temp\sapc.s
+50 cinit CODE >4361:C:\Users\linda\AppData\Local\Temp\sapc.s
+50 cinit CODE >4373:C:\Users\linda\AppData\Local\Temp\sapc.s
+51 cinit CODE >4379:C:\Users\linda\AppData\Local\Temp\sapc.s
+51 cinit CODE >4381:C:\Users\linda\AppData\Local\Temp\sapc.s
+52 cinit CODE >4382:C:\Users\linda\AppData\Local\Temp\sapc.s
+53 cinit CODE >4383:C:\Users\linda\AppData\Local\Temp\sapc.s
 4 intentry CODE >5:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
 6 intentry CODE >8:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
 B intentry CODE >10:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
@@ -124,82 +124,88 @@ D intentry CODE >12:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_sl
 1B intentry CODE >17:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
 1C intentry CODE >20:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
 24 intentry CODE >21:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-26 intentry CODE >22:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-2B intentry CODE >23:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-2F intentry CODE >25:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-30 intentry CODE >26:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-31 intentry CODE >27:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-39 intentry CODE >29:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-3D intentry CODE >30:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-3E intentry CODE >31:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-42 intentry CODE >32:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-43 intentry CODE >33:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-47 intentry CODE >34:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-47 intentry CODE >36:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-49 intentry CODE >38:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
-9A text5 CODE >11:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-9A text5 CODE >14:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-9D text5 CODE >16:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-9E text5 CODE >18:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-9F text5 CODE >20:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-A1 text5 CODE >22:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-A2 text5 CODE >23:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-52 text4 CODE >41:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-52 text4 CODE >46:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-54 text4 CODE >47:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-55 text4 CODE >48:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-56 text4 CODE >53:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-57 text4 CODE >54:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-59 text4 CODE >55:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-5B text4 CODE >60:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-5E text4 CODE >61:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-60 text4 CODE >62:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-62 text4 CODE >67:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-63 text4 CODE >68:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-64 text4 CODE >69:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-65 text4 CODE >70:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-66 text4 CODE >75:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-67 text4 CODE >76:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-68 text4 CODE >77:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-69 text4 CODE >82:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-6B text4 CODE >83:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-6D text4 CODE >84:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-6F text4 CODE >89:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-71 text4 CODE >90:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-73 text4 CODE >91:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-75 text4 CODE >92:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-77 text4 CODE >98:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-A3 text3 CODE >25:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-A3 text3 CODE >28:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-A5 text3 CODE >30:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-A6 text3 CODE >32:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-A7 text3 CODE >34:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-A8 text3 CODE >36:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-A9 text3 CODE >38:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-AA text3 CODE >39:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-78 text2 CODE >100:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-78 text2 CODE >101:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-7B text2 CODE >102:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-7D text2 CODE >103:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-7F text2 CODE >104:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-81 text2 CODE >105:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-83 text2 CODE >106:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-85 text2 CODE >108:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-86 text2 CODE >109:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-87 text2 CODE >110:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-89 text2 CODE >111:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-8A text2 CODE >112:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-8B text2 CODE >113:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-8C text2 CODE >115:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-8D text1 CODE >3:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-8D text1 CODE >5:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-90 text1 CODE >6:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-93 text1 CODE >7:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-96 text1 CODE >8:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-99 text1 CODE >9:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
-AB maintext CODE >6:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
-AB maintext CODE >8:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
-AE maintext CODE >9:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
+28 intentry CODE >22:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+30 intentry CODE >24:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+31 intentry CODE >26:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+33 intentry CODE >27:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+34 intentry CODE >28:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+3C intentry CODE >30:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+40 intentry CODE >31:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+41 intentry CODE >32:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+45 intentry CODE >33:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+46 intentry CODE >34:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+4A intentry CODE >35:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+4A intentry CODE >37:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+4C intentry CODE >39:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+AA text5 CODE >11:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+AA text5 CODE >14:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+AD text5 CODE >16:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+AE text5 CODE >18:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+AF text5 CODE >20:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+B1 text5 CODE >22:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+B2 text5 CODE >23:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+55 text4 CODE >41:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+55 text4 CODE >46:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+57 text4 CODE >47:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+58 text4 CODE >48:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+59 text4 CODE >53:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+5A text4 CODE >54:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+5C text4 CODE >55:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+5E text4 CODE >60:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+61 text4 CODE >61:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+63 text4 CODE >62:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+65 text4 CODE >67:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+66 text4 CODE >68:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+67 text4 CODE >69:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+68 text4 CODE >70:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+69 text4 CODE >75:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+6A text4 CODE >76:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+6B text4 CODE >77:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+6C text4 CODE >82:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+6E text4 CODE >83:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+70 text4 CODE >84:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+72 text4 CODE >89:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+74 text4 CODE >90:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+76 text4 CODE >91:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+78 text4 CODE >92:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+7A text4 CODE >94:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+7D text4 CODE >95:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+80 text4 CODE >96:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+82 text4 CODE >97:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+85 text4 CODE >98:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+87 text4 CODE >99:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+88 text4 CODE >100:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+B3 text3 CODE >25:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+B3 text3 CODE >28:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+B5 text3 CODE >30:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+B6 text3 CODE >32:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+B7 text3 CODE >34:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+B8 text3 CODE >36:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+B9 text3 CODE >38:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+BA text3 CODE >39:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+89 text2 CODE >102:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+89 text2 CODE >103:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+8C text2 CODE >104:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+8E text2 CODE >105:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+90 text2 CODE >106:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+92 text2 CODE >107:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+94 text2 CODE >108:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+95 text2 CODE >110:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+96 text2 CODE >111:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+97 text2 CODE >112:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+99 text2 CODE >113:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+9A text2 CODE >114:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+9B text2 CODE >115:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+9C text2 CODE >117:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+9D text1 CODE >3:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+9D text1 CODE >5:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+A0 text1 CODE >6:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+A3 text1 CODE >7:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+A6 text1 CODE >8:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+A9 text1 CODE >9:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+BB maintext CODE >6:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
+BB maintext CODE >8:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
+BE maintext CODE >9:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -214,13 +220,13 @@ AE maintext CODE >9:C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
 %SYMTAB
 _z 70 0 COMMON 1 bssCOMMON dist/default/production\i2c_18854_slave_nomcc.X.production.o
 ___latbits 1 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__Hspace_0 B1 0 ABS 0 - -
+__Hspace_0 C1 0 ABS 0 - -
 __Hspace_1 72 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 _SSP1STATbits 18F 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_PMD_Initialize 146 0 CODE 0 text3 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+_PMD_Initialize 166 0 CODE 0 text3 dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _LATA 16 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _LATB 17 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
@@ -236,25 +242,25 @@ _WPUA F39 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _WPUB F44 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _WPUC F4F 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _WPUE F65 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\linda\AppData\Local\Temp\s9vo.o
-_init 11A 0 CODE 0 text1 dist/default/production\i2c_18854_slave_nomcc.X.production.o
-_main 156 0 CODE 0 maintext dist/default/production\i2c_18854_slave_nomcc.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\linda\AppData\Local\Temp\sapc.o
+_init 13A 0 CODE 0 text1 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+_main 176 0 CODE 0 maintext dist/default/production\i2c_18854_slave_nomcc.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-start 96 0 CODE 0 init C:\Users\linda\AppData\Local\Temp\s9vo.o
+start 9C 0 CODE 0 init C:\Users\linda\AppData\Local\Temp\sapc.o
 __size_of_init 0 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\s9vo.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\s9vo.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\s9vo.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\s9vo.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\s9vo.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\s9vo.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\sapc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\sapc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\sapc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\sapc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\sapc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\linda\AppData\Local\Temp\sapc.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-__end_of_PMD_Initialize 156 0 CODE 0 text3 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__end_of_PMD_Initialize 176 0 CODE 0 text3 dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELA F38 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _ANSELB F43 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
@@ -264,17 +270,19 @@ _INLVLA F3C 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production
 _INLVLB F47 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _INLVLC F52 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _INLVLE F68 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-___stackhi 21EF 0 ABS 0 - C:\Users\linda\AppData\Local\Temp\s9vo.o
-___stacklo 2000 0 ABS 0 - C:\Users\linda\AppData\Local\Temp\s9vo.o
+___stackhi 21EF 0 ABS 0 - C:\Users\linda\AppData\Local\Temp\sapc.o
+___stacklo 2000 0 ABS 0 - C:\Users\linda\AppData\Local\Temp\sapc.o
 _I2C_Slave_Read 8 0 CODE 0 intentry dist/default/production\i2c_18854_slave_nomcc.X.production.o
-_PIN_MANAGER_Initialize A4 0 CODE 0 text4 dist/default/production\i2c_18854_slave_nomcc.X.production.o
-_slave_init F0 0 CODE 0 text2 dist/default/production\i2c_18854_slave_nomcc.X.production.o
-start_initialization 9A 0 CODE 0 cinit dist/default/production\i2c_18854_slave_nomcc.X.production.o
+_PIN_MANAGER_Initialize AA 0 CODE 0 text4 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+_slave_init 112 0 CODE 0 text2 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+start_initialization A0 0 CODE 0 cinit dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _ODCONA F3A 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _ODCONB F45 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _ODCONC F50 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _OSCFRQ 893 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\linda\AppData\Local\Temp\s9vo.o
+_RC3PPS F23 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
+_RC4PPS F24 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\linda\AppData\Local\Temp\sapc.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -285,8 +293,8 @@ __Hbank6 0 0 ABS 0 bank6 -
 __Hbank7 0 0 BANK7 1 bank7 -
 __Hbank8 0 0 BANK8 1 bank8 -
 __Hbank9 0 0 BANK9 1 bank9 -
-__Hcinit A4 0 CODE 0 cinit -
-__end_of_I2C_Slave_Read 96 0 CODE 0 intentry dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__Hcinit AA 0 CODE 0 cinit -
+__end_of_I2C_Slave_Read 9C 0 CODE 0 intentry dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -346,7 +354,7 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 BANK7 1 bank7 -
 __Lbank8 0 0 BANK8 1 bank8 -
 __Lbank9 0 0 BANK9 1 bank9 -
-__Lcinit 9A 0 CODE 0 cinit -
+__Lcinit A0 0 CODE 0 cinit -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
 __Lsfr12 0 0 ABS 0 sfr12 -
@@ -370,10 +378,10 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-__end_of_slave_init 11A 0 CODE 0 text2 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__end_of_slave_init 13A 0 CODE 0 text2 dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 96 0 CODE 0 init -
+__Hinit 9C 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -387,7 +395,7 @@ __Hsfr9 0 0 ABS 0 sfr9 -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 96 0 CODE 0 init -
+__Linit 9C 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
@@ -407,15 +415,15 @@ int$flags 7E 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.productio
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _RA1 61 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__S0 B1 0 ABS 0 - -
+__S0 C1 0 ABS 0 - -
 __S1 72 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\linda\AppData\Local\Temp\s9vo.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\linda\AppData\Local\Temp\sapc.o
 __size_of_PMD_Initialize 0 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _PIE3bits 719 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__end_of_PIN_MANAGER_Initialize F0 0 CODE 0 text4 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__end_of_PIN_MANAGER_Initialize 112 0 CODE 0 text4 dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Lbank10 0 0 BANK10 1 bank10 -
 __Lbank11 0 0 BANK11 1 bank11 -
 __Lbank12 0 0 BANK12 1 bank12 -
@@ -438,37 +446,39 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 156 0 CODE 0 maintext dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__pmaintext 176 0 CODE 0 maintext dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
+_SSP1CLKPPS EC5 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _OSCCON1 88D 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _OSCCON3 88F 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _OSCTUNE 892 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
+_SSP1DATPPS EC6 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _PIR3bits 70F 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__Lend_init 96 0 CODE 0 end_init -
+__Lend_init 9C 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 9C 0 CODE 0 cinit dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__Hintentry 96 0 CODE 0 intentry -
+end_of_initialization A2 0 CODE 0 cinit dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__Hintentry 9C 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __size_of_slave_init 0 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__ptext1 11A 0 CODE 0 text1 dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__ptext2 F0 0 CODE 0 text2 dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__ptext3 146 0 CODE 0 text3 dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__ptext4 A4 0 CODE 0 text4 dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__ptext5 134 0 CODE 0 text5 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__ptext1 13A 0 CODE 0 text1 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__ptext2 112 0 CODE 0 text2 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__ptext3 166 0 CODE 0 text3 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__ptext4 AA 0 CODE 0 text4 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__ptext5 154 0 CODE 0 text5 dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
 _SLRCONA F3B 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _SLRCONB F46 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _SLRCONC F51 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__end_of__initialization 9C 0 CODE 0 cinit dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__end_of__initialization A2 0 CODE 0 cinit dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __size_of_I2C_Slave_Read 0 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -477,9 +487,9 @@ __pcstackCOMMON 71 0 COMMON 1 cstackCOMMON dist/default/production\i2c_18854_sla
 _SSP1ADD 18D 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _SSP1BUF 18C 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _SSP1MSK 18E 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__Hend_init 9A 0 CODE 0 end_init -
-__end_of_init 134 0 CODE 0 text1 dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__end_of_main 162 0 CODE 0 maintext dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__Hend_init A0 0 CODE 0 end_init -
+__end_of_init 154 0 CODE 0 text1 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__end_of_main 182 0 CODE 0 maintext dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _OSCEN 891 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _PORTA C 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 _TRISA 11 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
@@ -489,9 +499,10 @@ __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__end_of_OSCILLATOR_Initialize 146 0 CODE 0 text5 dist/default/production\i2c_18854_slave_nomcc.X.production.o
-__initialization 9A 0 CODE 0 cinit dist/default/production\i2c_18854_slave_nomcc.X.production.o
-_OSCILLATOR_Initialize 134 0 CODE 0 text5 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__end_of_OSCILLATOR_Initialize 166 0 CODE 0 text5 dist/default/production\i2c_18854_slave_nomcc.X.production.o
+__initialization A0 0 CODE 0 cinit dist/default/production\i2c_18854_slave_nomcc.X.production.o
+_ANSELCbits F4E 0 ABS 0 - dist/default/production\i2c_18854_slave_nomcc.X.production.o
+_OSCILLATOR_Initialize 154 0 CODE 0 text5 dist/default/production\i2c_18854_slave_nomcc.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -517,7 +528,7 @@ _OSCILLATOR_Initialize 134 0 CODE 0 text5 dist/default/production\i2c_18854_slav
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-intentry 0 4 8 AD 2
+intentry 0 4 8 BD 2
 reset_vec 0 0 0 2 2
 bssCOMMON 1 70 70 2 1
 # %NOTES Section

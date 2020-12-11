@@ -57,7 +57,7 @@ void PIN_MANAGER_Initialize(void)
     /**
     ANSELx registers
     */
-    ANSELC = 0xE7;
+    ANSELC = 0xE7;//RC3 RC4設為數位
     ANSELB = 0xFF;
     ANSELA = 0xFD;
 
@@ -91,19 +91,21 @@ void PIN_MANAGER_Initialize(void)
     INLVLC = 0xFF;
     INLVLE = 0x08;
 
-//    SSP1CLKPPS = 0x13;   //RC3->MSSP1:SCL1;    
-//    RC3PPS = 0x14;   //RC3->MSSP1:SCL1;    
-//    RC4PPS = 0x15;   //RC4->MSSP1:SDA1;    
-//    SSP1DATPPS = 0x14;   //RC4->MSSP1:SDA1;    
+    SSP1CLKPPS = 0x13;   //RC3->MSSP1:SCL1;    
+    RC3PPS = 0x14;   //RC3->MSSP1:SCL1;    
+    RC4PPS = 0x15;   //RC4->MSSP1:SDA1;    
+    SSP1DATPPS = 0x14;   //RC4->MSSP1:SDA1;    
+    ANSELCbits.ANSC3=0;
+    ANSELCbits.ANSC4=0;
 }
 
 void slave_init(void){
     SSP1STAT = 0xC0;//智能輸入邏輯
     SSP1ADD = (uint8_t)(0x50<<1);
     SSP1MSK = 0xFF;
-    SSP1CON1 = 0x3E;
-    SSP1CON2 = 0x21;
-    SSP1CON3 = 0xFF;
+    SSP1CON1 = 0x26;
+    SSP1CON2 = 0x01;
+    SSP1CON3 = 0x00;
     
     GIE = 1;//中斷智能
     PEIE = 1;//中斷智能

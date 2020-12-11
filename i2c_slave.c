@@ -18,10 +18,8 @@ void __interrupt() I2C_Slave_Read()
     }
 
     if(!SSP1STATbits.D_nA && !SSP1STATbits.R_nW){//¼g
-    RA1=1;
-      z = SSP1BUF;
-      while(!SSP1STATbits.BF);
-//      PORTA = SSP1BUF;
+      while(!SSP1STATbits.BF);  
+      RA1=SSP1BUF;
       SSP1CON1bits.CKP = 1;
     }
     else if(!SSP1STATbits.D_nA && SSP1STATbits.R_nW)//Åª

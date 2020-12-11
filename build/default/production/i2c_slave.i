@@ -19769,9 +19769,10 @@ void __attribute__((picinterrupt(("")))) I2C_Slave_Read()
     }
 
     if(!SSP1STATbits.D_nA && !SSP1STATbits.R_nW){
-    RA1=1;
-      z = SSP1BUF;
       while(!SSP1STATbits.BF);
+      RA1=SSP1BUF;
+
+          RA1=1;
 
       SSP1CON1bits.CKP = 1;
     }
