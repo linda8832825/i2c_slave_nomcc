@@ -21,13 +21,11 @@
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 "41
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"102
+"104
 [v _slave_init slave_init `(v  1 e 1 0 ]
 "6 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"385 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
-[v _PORTA PORTA `VEuc  1 e 1 @12 ]
-"592
+"592 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
 [v _TRISA TRISA `VEuc  1 e 1 @17 ]
 "654
 [v _TRISB TRISB `VEuc  1 e 1 @18 ]
@@ -139,19 +137,19 @@
 [v _SSP1STATbits SSP1STATbits `VES181  1 e 1 @399 ]
 "4923
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S48 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S49 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "4953
-[s S54 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S55 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S59 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S60 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -160,13 +158,13 @@
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S68 . 1 `S48 1 . 1 0 `S54 1 . 1 0 `S59 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES68  1 e 1 @400 ]
+[u S69 . 1 `S49 1 . 1 0 `S55 1 . 1 0 `S60 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES69  1 e 1 @400 ]
 "5043
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
 "5230
 [v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @402 ]
-[s S31 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[s S32 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -174,9 +172,9 @@
 `uc 1 RCIF 1 0 :1:5 
 ]
 "21166
-[u S38 . 1 `S31 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES38  1 e 1 @1807 ]
-[s S405 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S39 . 1 `S32 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES39  1 e 1 @1807 ]
+[s S407 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -184,8 +182,8 @@
 `uc 1 RCIE 1 0 :1:5 
 ]
 "21588
-[u S412 . 1 `S405 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES412  1 e 1 @1817 ]
+[u S414 . 1 `S407 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES414  1 e 1 @1817 ]
 "21890
 [v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
 "21947
@@ -238,7 +236,7 @@
 [v _INLVLB INLVLB `VEuc  1 e 1 @3911 ]
 "33968
 [v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
-[s S366 . 1 `uc 1 ANSC0 1 0 :1:0 
+[s S367 . 1 `uc 1 ANSC0 1 0 :1:0 
 `uc 1 ANSC1 1 0 :1:1 
 `uc 1 ANSC2 1 0 :1:2 
 `uc 1 ANSC3 1 0 :1:3 
@@ -248,10 +246,10 @@
 `uc 1 ANSC7 1 0 :1:7 
 ]
 "33985
-[u S375 . 1 `S366 1 . 1 0 ]
+[u S376 . 1 `S367 1 . 1 0 ]
 "33985
 "33985
-[v _ANSELCbits ANSELCbits `VES375  1 e 1 @3918 ]
+[v _ANSELCbits ANSELCbits `VES376  1 e 1 @3918 ]
 "34030
 [v _WPUC WPUC `VEuc  1 e 1 @3919 ]
 "34092
@@ -269,10 +267,13 @@
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "39344
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
+"39515
+[v _RA0 RA0 `VEb  1 e 0 @96 ]
 "39536
 [v _RA1 RA1 `VEb  1 e 0 @97 ]
 "4 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
 [v _z z `uc  1 e 1 0 ]
+[v _y y `uc  1 e 1 0 ]
 "6 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
@@ -283,10 +284,10 @@
 {
 "9
 } 0
-"102
+"104
 [v _slave_init slave_init `(v  1 e 1 0 ]
 {
-"117
+"120
 } 0
 "25
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
@@ -296,7 +297,7 @@
 "41
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"100
+"102
 } 0
 "11
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
@@ -306,5 +307,5 @@
 "5 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
 [v _I2C_Slave_Read I2C_Slave_Read `II(v  1 e 1 0 ]
 {
-"39
+"41
 } 0

@@ -19752,10 +19752,10 @@ extern __bank0 __bit __timeout;
 
 
 
-uint8_t z;
+uint8_t z,y;
 void __attribute__((picinterrupt(("")))) I2C_Slave_Read()
 {
-
+    SSP1BUF=0x00;
   if(PIR3bits.SSP1IF == 1)
   {
     SSP1CON1bits.CKP = 0;
@@ -19769,22 +19769,16 @@ void __attribute__((picinterrupt(("")))) I2C_Slave_Read()
     }
 
     if(!SSP1STATbits.D_nA && !SSP1STATbits.R_nW){
+
       while(!SSP1STATbits.BF);
-      RA1=SSP1BUF;
 
-          RA1=1;
+      y=SSP1BUF;
+      if(y==0xDB) RA0=1;
+      if(y==0x74) RA1=1;
 
       SSP1CON1bits.CKP = 1;
     }
-    else if(!SSP1STATbits.D_nA && SSP1STATbits.R_nW)
-    {
-      z = SSP1BUF;
-      SSP1STATbits.BF = 0;
-      SSP1BUF = PORTA ;
-      SSP1CON1bits.CKP = 1;
-      while(SSP1STATbits.BF);
-    }
-
+# 39 "i2c_slave.c"
     PIR3bits.SSP1IF = 0;
   }
 }

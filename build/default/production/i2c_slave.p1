@@ -1,7 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
-"21157 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
+"4349 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
+[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 4349: extern volatile unsigned char SSP1BUF __attribute__((address(0x18C)));
+[v _SSP1BUF `Vuc ~T0 @X0 0 e@396 ]
+"21157
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 21157:     struct {
 [s S967 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S967 . SSP1IF BCL1IF SSP2IF BCL2IF TXIF RCIF ]
@@ -31,9 +34,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4953
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 4953: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0x190)));
 [v _SSP1CON1bits `VS237 ~T0 @X0 0 e@400 ]
-"4349
-[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 4349: extern volatile unsigned char SSP1BUF __attribute__((address(0x18C)));
-[v _SSP1BUF `Vuc ~T0 @X0 0 e@396 ]
 "4565
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 4565:     struct {
 [s S222 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -101,12 +101,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4668
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 4668: extern volatile SSP1STATbits_t SSP1STATbits __attribute__((address(0x18F)));
 [v _SSP1STATbits `VS221 ~T0 @X0 0 e@399 ]
+"39515
+[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 39515: extern volatile __bit RA0 __attribute__((address(0x60)));
+[v _RA0 `Vb ~T0 @X0 0 e@96 ]
 "39536
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 39536: extern volatile __bit RA1 __attribute__((address(0x61)));
 [v _RA1 `Vb ~T0 @X0 0 e@97 ]
-"385
-[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 385: extern volatile unsigned char PORTA __attribute__((address(0x00C)));
-[v _PORTA `Vuc ~T0 @X0 0 e@12 ]
 "55 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1659,8 +1659,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 34907: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 "4 i2c_slave.c
-[; ;i2c_slave.c: 4: uint8_t z;
+[; ;i2c_slave.c: 4: uint8_t z,y;
 [v _z `uc ~T0 @X0 1 e ]
+[v _y `uc ~T0 @X0 1 e ]
 [v $root$_I2C_Slave_Read `(v ~T0 @X0 0 e ]
 "5
 [; ;i2c_slave.c: 5: void __attribute__((picinterrupt(("")))) I2C_Slave_Read()
@@ -1670,6 +1671,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _I2C_Slave_Read ]
 [f ]
+"7
+[; ;i2c_slave.c: 7:     SSP1BUF=0x00;
+[e = _SSP1BUF -> -> 0 `i `uc ]
 "8
 [; ;i2c_slave.c: 8:   if(PIR3bits.SSP1IF == 1)
 [e $ ! == -> . . _PIR3bits 0 0 `i -> 1 `i 1563  ]
@@ -1703,65 +1707,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;i2c_slave.c: 20:     if(!SSP1STATbits.D_nA && !SSP1STATbits.R_nW){
 [e $ ! && ! != -> . . _SSP1STATbits 0 5 `i -> 0 `i ! != -> . . _SSP1STATbits 0 2 `i -> 0 `i 1565  ]
 {
-"21
-[; ;i2c_slave.c: 21:       while(!SSP1STATbits.BF);
+"22
+[; ;i2c_slave.c: 22:       while(!SSP1STATbits.BF);
 [e $U 1566  ]
 [e :U 1567 ]
 [e :U 1566 ]
 [e $ ! != -> . . _SSP1STATbits 0 0 `i -> 0 `i 1567  ]
 [e :U 1568 ]
-"22
-[; ;i2c_slave.c: 22:       RA1=SSP1BUF;
-[e = _RA1 -> _SSP1BUF `b ]
 "24
-[; ;i2c_slave.c: 24:           RA1=1;
-[e = _RA1 -> -> 1 `i `b ]
-"26
-[; ;i2c_slave.c: 26:       SSP1CON1bits.CKP = 1;
-[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
-"27
-[; ;i2c_slave.c: 27:     }
-}
-[e $U 1569  ]
-"28
-[; ;i2c_slave.c: 28:     else if(!SSP1STATbits.D_nA && SSP1STATbits.R_nW)
-[e :U 1565 ]
-[e $ ! && ! != -> . . _SSP1STATbits 0 5 `i -> 0 `i != -> . . _SSP1STATbits 0 2 `i -> 0 `i 1570  ]
-"29
-[; ;i2c_slave.c: 29:     {
-{
-"30
-[; ;i2c_slave.c: 30:       z = SSP1BUF;
-[e = _z _SSP1BUF ]
-"31
-[; ;i2c_slave.c: 31:       SSP1STATbits.BF = 0;
-[e = . . _SSP1STATbits 0 0 -> -> 0 `i `uc ]
-"32
-[; ;i2c_slave.c: 32:       SSP1BUF = PORTA ;
-[e = _SSP1BUF _PORTA ]
-"33
-[; ;i2c_slave.c: 33:       SSP1CON1bits.CKP = 1;
-[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
-"34
-[; ;i2c_slave.c: 34:       while(SSP1STATbits.BF);
-[e $U 1571  ]
-[e :U 1572 ]
-[e :U 1571 ]
-[e $ != -> . . _SSP1STATbits 0 0 `i -> 0 `i 1572  ]
-[e :U 1573 ]
-"35
-[; ;i2c_slave.c: 35:     }
-}
-[e :U 1570 ]
+[; ;i2c_slave.c: 24:       y=SSP1BUF;
+[e = _y _SSP1BUF ]
+"25
+[; ;i2c_slave.c: 25:       if(y==0xDB) RA0=1;
+[e $ ! == -> _y `i -> 219 `i 1569  ]
+[e = _RA0 -> -> 1 `i `b ]
 [e :U 1569 ]
-"37
-[; ;i2c_slave.c: 37:     PIR3bits.SSP1IF = 0;
+"26
+[; ;i2c_slave.c: 26:       if(y==0x74) RA1=1;
+[e $ ! == -> _y `i -> 116 `i 1570  ]
+[e = _RA1 -> -> 1 `i `b ]
+[e :U 1570 ]
+"28
+[; ;i2c_slave.c: 28:       SSP1CON1bits.CKP = 1;
+[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
+"29
+[; ;i2c_slave.c: 29:     }
+}
+[e :U 1565 ]
+"39
+[; ;i2c_slave.c: 39:     PIR3bits.SSP1IF = 0;
 [e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
-"38
-[; ;i2c_slave.c: 38:   }
+"40
+[; ;i2c_slave.c: 40:   }
 }
 [e :U 1563 ]
-"39
-[; ;i2c_slave.c: 39: }
+"41
+[; ;i2c_slave.c: 41: }
 [e :UE 1562 ]
 }
