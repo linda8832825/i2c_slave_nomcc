@@ -11,17 +11,17 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"5 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+"7 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
 [v _I2C_Slave_Read I2C_Slave_Read `II(v  1 e 1 0 ]
-"3 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+"5 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
 [v _init init `(v  1 e 1 0 ]
-"11
+"13
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"25
+"27
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"41
+"43
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"104
+"106
 [v _slave_init slave_init `(v  1 e 1 0 ]
 "6 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
 [v _main main `(v  1 e 1 0 ]
@@ -45,7 +45,7 @@
 [v _SSP1MSK SSP1MSK `VEuc  1 e 1 @398 ]
 "4559
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S94 . 1 `uc 1 BF 1 0 :1:0 
+[s S97 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -55,33 +55,33 @@
 `uc 1 SMP 1 0 :1:7 
 ]
 "4668
-[s S103 . 1 `uc 1 . 1 0 :2:0 
+[s S106 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S108 . 1 `uc 1 . 1 0 :2:0 
+[s S111 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S113 . 1 `uc 1 . 1 0 :2:0 
+[s S116 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S118 . 1 `uc 1 . 1 0 :2:0 
+[s S121 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S123 . 1 `uc 1 . 1 0 :2:0 
+[s S126 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S129 . 1 `uc 1 BF1 1 0 :1:0 
+[s S132 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -90,66 +90,66 @@
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S138 . 1 `uc 1 . 1 0 :2:0 
+[s S141 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S144 . 1 `uc 1 . 1 0 :2:0 
+[s S147 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S150 . 1 `uc 1 . 1 0 :2:0 
+[s S153 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S156 . 1 `uc 1 . 1 0 :2:0 
+[s S159 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S161 . 1 `uc 1 . 1 0 :2:0 
+[s S164 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S166 . 1 `uc 1 . 1 0 :2:0 
+[s S169 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S171 . 1 `uc 1 . 1 0 :2:0 
+[s S174 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S176 . 1 `uc 1 . 1 0 :2:0 
+[s S179 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S181 . 1 `S94 1 . 1 0 `S103 1 . 1 0 `S108 1 . 1 0 `S113 1 . 1 0 `S118 1 . 1 0 `S123 1 . 1 0 `S129 1 . 1 0 `S138 1 . 1 0 `S144 1 . 1 0 `S150 1 . 1 0 `S156 1 . 1 0 `S161 1 . 1 0 `S166 1 . 1 0 `S171 1 . 1 0 `S176 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES181  1 e 1 @399 ]
+[u S184 . 1 `S97 1 . 1 0 `S106 1 . 1 0 `S111 1 . 1 0 `S116 1 . 1 0 `S121 1 . 1 0 `S126 1 . 1 0 `S132 1 . 1 0 `S141 1 . 1 0 `S147 1 . 1 0 `S153 1 . 1 0 `S159 1 . 1 0 `S164 1 . 1 0 `S169 1 . 1 0 `S174 1 . 1 0 `S179 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES184  1 e 1 @399 ]
 "4923
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S49 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S51 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "4953
-[s S55 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S57 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S60 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S62 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -158,13 +158,25 @@
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S69 . 1 `S49 1 . 1 0 `S55 1 . 1 0 `S60 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES69  1 e 1 @400 ]
+[u S71 . 1 `S51 1 . 1 0 `S57 1 . 1 0 `S62 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES71  1 e 1 @400 ]
 "5043
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
 "5230
 [v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @402 ]
-[s S32 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[s S400 . 1 `uc 1 DHEN 1 0 :1:0 
+`uc 1 AHEN 1 0 :1:1 
+`uc 1 SBCDE 1 0 :1:2 
+`uc 1 SDAHT 1 0 :1:3 
+`uc 1 BOEN 1 0 :1:4 
+`uc 1 SCIE 1 0 :1:5 
+`uc 1 PCIE 1 0 :1:6 
+`uc 1 ACKTIM 1 0 :1:7 
+]
+"5247
+[u S409 . 1 `S400 1 . 1 0 ]
+[v _SSP1CON3bits SSP1CON3bits `VES409  1 e 1 @402 ]
+[s S34 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -172,9 +184,9 @@
 `uc 1 RCIF 1 0 :1:5 
 ]
 "21166
-[u S39 . 1 `S32 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES39  1 e 1 @1807 ]
-[s S407 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S41 . 1 `S34 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES41  1 e 1 @1807 ]
+[s S434 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -182,8 +194,8 @@
 `uc 1 RCIE 1 0 :1:5 
 ]
 "21588
-[u S414 . 1 `S407 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES414  1 e 1 @1817 ]
+[u S441 . 1 `S434 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES441  1 e 1 @1817 ]
 "21890
 [v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
 "21947
@@ -236,7 +248,7 @@
 [v _INLVLB INLVLB `VEuc  1 e 1 @3911 ]
 "33968
 [v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
-[s S367 . 1 `uc 1 ANSC0 1 0 :1:0 
+[s S373 . 1 `uc 1 ANSC0 1 0 :1:0 
 `uc 1 ANSC1 1 0 :1:1 
 `uc 1 ANSC2 1 0 :1:2 
 `uc 1 ANSC3 1 0 :1:3 
@@ -246,10 +258,10 @@
 `uc 1 ANSC7 1 0 :1:7 
 ]
 "33985
-[u S376 . 1 `S367 1 . 1 0 ]
+[u S382 . 1 `S373 1 . 1 0 ]
 "33985
 "33985
-[v _ANSELCbits ANSELCbits `VES376  1 e 1 @3918 ]
+[v _ANSELCbits ANSELCbits `VES382  1 e 1 @3918 ]
 "34030
 [v _WPUC WPUC `VEuc  1 e 1 @3919 ]
 "34092
@@ -271,7 +283,11 @@
 [v _RA0 RA0 `VEb  1 e 0 @96 ]
 "39536
 [v _RA1 RA1 `VEb  1 e 0 @97 ]
-"4 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+"39557
+[v _RA2 RA2 `VEb  1 e 0 @98 ]
+"39578
+[v _RA3 RA3 `VEb  1 e 0 @99 ]
+"6 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
 [v _z z `uc  1 e 1 0 ]
 [v _y y `uc  1 e 1 0 ]
 "6 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\main.c
@@ -279,33 +295,33 @@
 {
 "10
 } 0
-"3 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
+"5 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\init.c
 [v _init init `(v  1 e 1 0 ]
 {
-"9
+"11
 } 0
-"104
+"106
 [v _slave_init slave_init `(v  1 e 1 0 ]
 {
-"120
+"123
 } 0
-"25
+"27
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
-"39
-} 0
 "41
+} 0
+"43
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"102
+"104
 } 0
-"11
+"13
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"23
+"25
 } 0
-"5 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
+"7 C:\Users\linda\MPLABXProjects\i2c_18854_slave_nomcc.X\i2c_slave.c
 [v _I2C_Slave_Read I2C_Slave_Read `II(v  1 e 1 0 ]
 {
-"41
+"42
 } 0

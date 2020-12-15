@@ -1,15 +1,15 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"8 ./init.h
-[; ;./init.h: 8: void PMD_Initialize(void);
+"9 ./init.h
+[; ;./init.h: 9: void PMD_Initialize(void);
 [v _PMD_Initialize `(v ~T0 @X0 0 ef ]
-"9
-[; ;./init.h: 9: void PIN_MANAGER_Initialize(void);
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"7
-[; ;./init.h: 7: void OSCILLATOR_Initialize(void);
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
 "10
-[; ;./init.h: 10: void slave_init(void);
+[; ;./init.h: 10: void PIN_MANAGER_Initialize(void);
+[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
+"8
+[; ;./init.h: 8: void OSCILLATOR_Initialize(void);
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
+"11
+[; ;./init.h: 11: void slave_init(void);
 [v _slave_init `(v ~T0 @X0 0 ef ]
 "23241 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 23241: extern volatile unsigned char OSCCON1 __attribute__((address(0x88D)));
@@ -154,6 +154,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5230
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 5230: extern volatile unsigned char SSP1CON3 __attribute__((address(0x192)));
 [v _SSP1CON3 `Vuc ~T0 @X0 0 e@402 ]
+"5236
+[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 5236:     struct {
+[s S243 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S243 . DHEN AHEN SBCDE SDAHT BOEN SCIE PCIE ACKTIM ]
+"5235
+[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 5235: typedef union {
+[u S242 `S243 1 ]
+[n S242 . . ]
+"5247
+[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 5247: extern volatile SSP1CON3bits_t SSP1CON3bits __attribute__((address(0x192)));
+[v _SSP1CON3bits `VS242 ~T0 @X0 0 e@402 ]
 "4349
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 4349: extern volatile unsigned char SSP1BUF __attribute__((address(0x18C)));
 [v _SSP1BUF `Vuc ~T0 @X0 0 e@396 ]
@@ -1736,232 +1747,242 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34907
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 34907: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"3 init.c
-[; ;init.c: 3: void init(void)
+"12 ./init.h
+[; ;./init.h: 12: _Bool n;
+[v _n `a ~T0 @X0 1 e ]
+"5 init.c
+[; ;init.c: 5: void init(void)
 [v _init `(v ~T0 @X0 1 ef ]
-"4
-[; ;init.c: 4: {
+"6
+[; ;init.c: 6: {
 {
 [e :U _init ]
 [f ]
-"5
-[; ;init.c: 5:     PMD_Initialize();
-[e ( _PMD_Initialize ..  ]
-"6
-[; ;init.c: 6:     PIN_MANAGER_Initialize();
-[e ( _PIN_MANAGER_Initialize ..  ]
 "7
-[; ;init.c: 7:     OSCILLATOR_Initialize();
-[e ( _OSCILLATOR_Initialize ..  ]
+[; ;init.c: 7:     PMD_Initialize();
+[e ( _PMD_Initialize ..  ]
 "8
-[; ;init.c: 8:     slave_init();
-[e ( _slave_init ..  ]
+[; ;init.c: 8:     PIN_MANAGER_Initialize();
+[e ( _PIN_MANAGER_Initialize ..  ]
 "9
-[; ;init.c: 9: }
+[; ;init.c: 9:     OSCILLATOR_Initialize();
+[e ( _OSCILLATOR_Initialize ..  ]
+"10
+[; ;init.c: 10:     slave_init();
+[e ( _slave_init ..  ]
+"11
+[; ;init.c: 11: }
 [e :UE 1562 ]
 }
-"11
-[; ;init.c: 11: void OSCILLATOR_Initialize(void)
+"13
+[; ;init.c: 13: void OSCILLATOR_Initialize(void)
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"12
-[; ;init.c: 12: {
+"14
+[; ;init.c: 14: {
 {
 [e :U _OSCILLATOR_Initialize ]
 [f ]
-"14
-[; ;init.c: 14:     OSCCON1 = 0x60;
-[e = _OSCCON1 -> -> 96 `i `uc ]
 "16
-[; ;init.c: 16:     OSCCON3 = 0x00;
-[e = _OSCCON3 -> -> 0 `i `uc ]
+[; ;init.c: 16:     OSCCON1 = 0x60;
+[e = _OSCCON1 -> -> 96 `i `uc ]
 "18
-[; ;init.c: 18:     OSCEN = 0x00;
-[e = _OSCEN -> -> 0 `i `uc ]
+[; ;init.c: 18:     OSCCON3 = 0x00;
+[e = _OSCCON3 -> -> 0 `i `uc ]
 "20
-[; ;init.c: 20:     OSCFRQ = 0x02;
-[e = _OSCFRQ -> -> 2 `i `uc ]
+[; ;init.c: 20:     OSCEN = 0x00;
+[e = _OSCEN -> -> 0 `i `uc ]
 "22
-[; ;init.c: 22:     OSCTUNE = 0x00;
+[; ;init.c: 22:     OSCFRQ = 0x02;
+[e = _OSCFRQ -> -> 2 `i `uc ]
+"24
+[; ;init.c: 24:     OSCTUNE = 0x00;
 [e = _OSCTUNE -> -> 0 `i `uc ]
-"23
-[; ;init.c: 23: }
+"25
+[; ;init.c: 25: }
 [e :UE 1563 ]
 }
-"25
-[; ;init.c: 25: void PMD_Initialize(void)
+"27
+[; ;init.c: 27: void PMD_Initialize(void)
 [v _PMD_Initialize `(v ~T0 @X0 1 ef ]
-"26
-[; ;init.c: 26: {
+"28
+[; ;init.c: 28: {
 {
 [e :U _PMD_Initialize ]
 [f ]
-"28
-[; ;init.c: 28:     PMD0 = 0x00;
-[e = _PMD0 -> -> 0 `i `uc ]
 "30
-[; ;init.c: 30:     PMD1 = 0x00;
-[e = _PMD1 -> -> 0 `i `uc ]
+[; ;init.c: 30:     PMD0 = 0x00;
+[e = _PMD0 -> -> 0 `i `uc ]
 "32
-[; ;init.c: 32:     PMD2 = 0x00;
-[e = _PMD2 -> -> 0 `i `uc ]
+[; ;init.c: 32:     PMD1 = 0x00;
+[e = _PMD1 -> -> 0 `i `uc ]
 "34
-[; ;init.c: 34:     PMD3 = 0x00;
-[e = _PMD3 -> -> 0 `i `uc ]
+[; ;init.c: 34:     PMD2 = 0x00;
+[e = _PMD2 -> -> 0 `i `uc ]
 "36
-[; ;init.c: 36:     PMD4 = 0x00;
-[e = _PMD4 -> -> 0 `i `uc ]
+[; ;init.c: 36:     PMD3 = 0x00;
+[e = _PMD3 -> -> 0 `i `uc ]
 "38
-[; ;init.c: 38:     PMD5 = 0x00;
+[; ;init.c: 38:     PMD4 = 0x00;
+[e = _PMD4 -> -> 0 `i `uc ]
+"40
+[; ;init.c: 40:     PMD5 = 0x00;
 [e = _PMD5 -> -> 0 `i `uc ]
-"39
-[; ;init.c: 39: }
+"41
+[; ;init.c: 41: }
 [e :UE 1564 ]
 }
-"41
-[; ;init.c: 41: void PIN_MANAGER_Initialize(void)
+"43
+[; ;init.c: 43: void PIN_MANAGER_Initialize(void)
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
-"42
-[; ;init.c: 42: {
+"44
+[; ;init.c: 44: {
 {
 [e :U _PIN_MANAGER_Initialize ]
 [f ]
-"46
-[; ;init.c: 46:     LATA = 0x00;
-[e = _LATA -> -> 0 `i `uc ]
-"47
-[; ;init.c: 47:     LATB = 0x00;
-[e = _LATB -> -> 0 `i `uc ]
 "48
-[; ;init.c: 48:     LATC = 0x00;
+[; ;init.c: 48:     LATA = 0x00;
+[e = _LATA -> -> 0 `i `uc ]
+"49
+[; ;init.c: 49:     LATB = 0x00;
+[e = _LATB -> -> 0 `i `uc ]
+"50
+[; ;init.c: 50:     LATC = 0x00;
 [e = _LATC -> -> 0 `i `uc ]
-"53
-[; ;init.c: 53:     TRISA = 0x00;
-[e = _TRISA -> -> 0 `i `uc ]
-"54
-[; ;init.c: 54:     TRISB = 0xFF;
-[e = _TRISB -> -> 255 `i `uc ]
 "55
-[; ;init.c: 55:     TRISC = 0xFF;
+[; ;init.c: 55:     TRISA = 0x00;
+[e = _TRISA -> -> 0 `i `uc ]
+"56
+[; ;init.c: 56:     TRISB = 0xFF;
+[e = _TRISB -> -> 255 `i `uc ]
+"57
+[; ;init.c: 57:     TRISC = 0xFF;
 [e = _TRISC -> -> 255 `i `uc ]
-"60
-[; ;init.c: 60:     ANSELC = 0xE7;
-[e = _ANSELC -> -> 231 `i `uc ]
-"61
-[; ;init.c: 61:     ANSELB = 0xFF;
-[e = _ANSELB -> -> 255 `i `uc ]
 "62
-[; ;init.c: 62:     ANSELA = 0x00;
+[; ;init.c: 62:     ANSELC = 0xE7;
+[e = _ANSELC -> -> 231 `i `uc ]
+"63
+[; ;init.c: 63:     ANSELB = 0xFF;
+[e = _ANSELB -> -> 255 `i `uc ]
+"64
+[; ;init.c: 64:     ANSELA = 0x00;
 [e = _ANSELA -> -> 0 `i `uc ]
-"67
-[; ;init.c: 67:     WPUE = 0x00;
-[e = _WPUE -> -> 0 `i `uc ]
-"68
-[; ;init.c: 68:     WPUB = 0x00;
-[e = _WPUB -> -> 0 `i `uc ]
 "69
-[; ;init.c: 69:     WPUA = 0x00;
-[e = _WPUA -> -> 0 `i `uc ]
+[; ;init.c: 69:     WPUE = 0x00;
+[e = _WPUE -> -> 0 `i `uc ]
 "70
-[; ;init.c: 70:     WPUC = 0x00;
+[; ;init.c: 70:     WPUB = 0x00;
+[e = _WPUB -> -> 0 `i `uc ]
+"71
+[; ;init.c: 71:     WPUA = 0x00;
+[e = _WPUA -> -> 0 `i `uc ]
+"72
+[; ;init.c: 72:     WPUC = 0x00;
 [e = _WPUC -> -> 0 `i `uc ]
-"75
-[; ;init.c: 75:     ODCONA = 0x00;
-[e = _ODCONA -> -> 0 `i `uc ]
-"76
-[; ;init.c: 76:     ODCONB = 0x00;
-[e = _ODCONB -> -> 0 `i `uc ]
 "77
-[; ;init.c: 77:     ODCONC = 0x00;
+[; ;init.c: 77:     ODCONA = 0x00;
+[e = _ODCONA -> -> 0 `i `uc ]
+"78
+[; ;init.c: 78:     ODCONB = 0x00;
+[e = _ODCONB -> -> 0 `i `uc ]
+"79
+[; ;init.c: 79:     ODCONC = 0x00;
 [e = _ODCONC -> -> 0 `i `uc ]
-"82
-[; ;init.c: 82:     SLRCONA = 0xFF;
-[e = _SLRCONA -> -> 255 `i `uc ]
-"83
-[; ;init.c: 83:     SLRCONB = 0xFF;
-[e = _SLRCONB -> -> 255 `i `uc ]
 "84
-[; ;init.c: 84:     SLRCONC = 0xFF;
+[; ;init.c: 84:     SLRCONA = 0xFF;
+[e = _SLRCONA -> -> 255 `i `uc ]
+"85
+[; ;init.c: 85:     SLRCONB = 0xFF;
+[e = _SLRCONB -> -> 255 `i `uc ]
+"86
+[; ;init.c: 86:     SLRCONC = 0xFF;
 [e = _SLRCONC -> -> 255 `i `uc ]
-"89
-[; ;init.c: 89:     INLVLA = 0x00;
-[e = _INLVLA -> -> 0 `i `uc ]
-"90
-[; ;init.c: 90:     INLVLB = 0xFF;
-[e = _INLVLB -> -> 255 `i `uc ]
 "91
-[; ;init.c: 91:     INLVLC = 0xFF;
-[e = _INLVLC -> -> 255 `i `uc ]
+[; ;init.c: 91:     INLVLA = 0x00;
+[e = _INLVLA -> -> 0 `i `uc ]
 "92
-[; ;init.c: 92:     INLVLE = 0x08;
-[e = _INLVLE -> -> 8 `i `uc ]
+[; ;init.c: 92:     INLVLB = 0xFF;
+[e = _INLVLB -> -> 255 `i `uc ]
+"93
+[; ;init.c: 93:     INLVLC = 0xFF;
+[e = _INLVLC -> -> 255 `i `uc ]
 "94
-[; ;init.c: 94:     SSP1CLKPPS = 0x13;
-[e = _SSP1CLKPPS -> -> 19 `i `uc ]
-"95
-[; ;init.c: 95:     RC3PPS = 0x14;
-[e = _RC3PPS -> -> 20 `i `uc ]
+[; ;init.c: 94:     INLVLE = 0x08;
+[e = _INLVLE -> -> 8 `i `uc ]
 "96
-[; ;init.c: 96:     RC4PPS = 0x15;
-[e = _RC4PPS -> -> 21 `i `uc ]
+[; ;init.c: 96:     SSP1CLKPPS = 0x13;
+[e = _SSP1CLKPPS -> -> 19 `i `uc ]
 "97
-[; ;init.c: 97:     SSP1DATPPS = 0x14;
-[e = _SSP1DATPPS -> -> 20 `i `uc ]
+[; ;init.c: 97:     RC3PPS = 0x14;
+[e = _RC3PPS -> -> 20 `i `uc ]
 "98
-[; ;init.c: 98:     ANSELCbits.ANSC3=0;
-[e = . . _ANSELCbits 0 3 -> -> 0 `i `uc ]
+[; ;init.c: 98:     RC4PPS = 0x15;
+[e = _RC4PPS -> -> 21 `i `uc ]
 "99
-[; ;init.c: 99:     ANSELCbits.ANSC4=0;
+[; ;init.c: 99:     SSP1DATPPS = 0x14;
+[e = _SSP1DATPPS -> -> 20 `i `uc ]
+"100
+[; ;init.c: 100:     ANSELCbits.ANSC3=0;
+[e = . . _ANSELCbits 0 3 -> -> 0 `i `uc ]
+"101
+[; ;init.c: 101:     ANSELCbits.ANSC4=0;
 [e = . . _ANSELCbits 0 4 -> -> 0 `i `uc ]
-"102
-[; ;init.c: 102: }
+"104
+[; ;init.c: 104: }
 [e :UE 1565 ]
 }
-"104
-[; ;init.c: 104: void slave_init(void){
+"106
+[; ;init.c: 106: void slave_init(void){
 [v _slave_init `(v ~T0 @X0 1 ef ]
 {
 [e :U _slave_init ]
 [f ]
-"105
-[; ;init.c: 105:     SSP1STAT = 0xC0;
-[e = _SSP1STAT -> -> 192 `i `uc ]
-"106
-[; ;init.c: 106:     SSP1ADD = (uint8_t)(0x3A<<1);
-[e = _SSP1ADD -> << -> 58 `i -> 1 `i `uc ]
 "107
-[; ;init.c: 107:     SSP1MSK = 0xFF;
-[e = _SSP1MSK -> -> 255 `i `uc ]
+[; ;init.c: 107:     SSP1STAT = 0xC0;
+[e = _SSP1STAT -> -> 192 `i `uc ]
 "108
-[; ;init.c: 108:     SSP1CON1 = 0x26;
-[e = _SSP1CON1 -> -> 38 `i `uc ]
+[; ;init.c: 108:     SSP1ADD = (uint8_t)(0x3A<<1);
+[e = _SSP1ADD -> << -> 58 `i -> 1 `i `uc ]
 "109
-[; ;init.c: 109:     SSP1CON2 = 0x01;
-[e = _SSP1CON2 -> -> 1 `i `uc ]
+[; ;init.c: 109:     SSP1MSK = 0xFF;
+[e = _SSP1MSK -> -> 255 `i `uc ]
 "110
-[; ;init.c: 110:     SSP1CON3 = 0x00;
-[e = _SSP1CON3 -> -> 0 `i `uc ]
+[; ;init.c: 110:     SSP1CON1 = 0x26;
+[e = _SSP1CON1 -> -> 38 `i `uc ]
 "111
-[; ;init.c: 111:     SSP1BUF = 0x00;
-[e = _SSP1BUF -> -> 0 `i `uc ]
+[; ;init.c: 111:     SSP1CON2 = 0x01;
+[e = _SSP1CON2 -> -> 1 `i `uc ]
+"112
+[; ;init.c: 112:     SSP1CON3 = 0x00;
+[e = _SSP1CON3 -> -> 0 `i `uc ]
 "113
-[; ;init.c: 113:     GIE = 1;
-[e = _GIE -> -> 1 `i `b ]
+[; ;init.c: 113:     SSP1CON3bits.BOEN=1;
+[e = . . _SSP1CON3bits 0 4 -> -> 1 `i `uc ]
 "114
-[; ;init.c: 114:     PEIE = 1;
-[e = _PEIE -> -> 1 `i `b ]
+[; ;init.c: 114:     SSP1BUF = 0x00;
+[e = _SSP1BUF -> -> 0 `i `uc ]
 "115
-[; ;init.c: 115:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+[; ;init.c: 115:     _Bool n=0;
+[v _n `a ~T0 @X0 1 a ]
+[e = _n -> -> 0 `i `a ]
 "116
-[; ;init.c: 116:     PIR3bits.BCL1IF = 0;
-[e = . . _PIR3bits 0 1 -> -> 0 `i `uc ]
+[; ;init.c: 116:     GIE = 1;
+[e = _GIE -> -> 1 `i `b ]
 "117
-[; ;init.c: 117:     PIE3bits.SSP1IE = 1;
-[e = . . _PIE3bits 0 0 -> -> 1 `i `uc ]
+[; ;init.c: 117:     PEIE = 1;
+[e = _PEIE -> -> 1 `i `b ]
 "118
-[; ;init.c: 118:     PIE3bits.BCL1IE = 1;
-[e = . . _PIE3bits 0 1 -> -> 1 `i `uc ]
+[; ;init.c: 118:     PIR3bits.SSP1IF = 0;
+[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+"119
+[; ;init.c: 119:     PIR3bits.BCL1IF = 0;
+[e = . . _PIR3bits 0 1 -> -> 0 `i `uc ]
 "120
-[; ;init.c: 120: }
+[; ;init.c: 120:     PIE3bits.SSP1IE = 1;
+[e = . . _PIE3bits 0 0 -> -> 1 `i `uc ]
+"121
+[; ;init.c: 121:     PIE3bits.BCL1IE = 1;
+[e = . . _PIE3bits 0 1 -> -> 1 `i `uc ]
+"123
+[; ;init.c: 123: }
 [e :UE 1566 ]
 }

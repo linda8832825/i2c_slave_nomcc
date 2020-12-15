@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"6 ./init.h
-[; ;./init.h: 6: void init(void);
+"7 ./init.h
+[; ;./init.h: 7: void init(void);
 [v _init `(v ~T0 @X0 0 ef ]
 "55 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 55: __asm("INDF0 equ 00h");
@@ -1554,6 +1554,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34907
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 34907: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
+"12 ./init.h
+[; ;./init.h: 12: _Bool n;
+[v _n `a ~T0 @X0 1 e ]
+"5 ./i2c_slave.h
+[; ;./i2c_slave.h: 5: uint8_t z,y;
+[v _z `uc ~T0 @X0 1 e ]
+[v _y `uc ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "6 main.c
 [; ;main.c: 6: void main()

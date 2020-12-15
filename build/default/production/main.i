@@ -19756,12 +19756,16 @@ extern __bank0 __bit __timeout;
 
 
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c99\\stdbool.h" 1 3
+# 5 "./init.h" 2
+
 
 void init(void);
 void OSCILLATOR_Initialize(void);
 void PMD_Initialize(void);
 void PIN_MANAGER_Initialize(void);
 void slave_init(void);
+_Bool n;
 # 3 "main.c" 2
 
 # 1 "./i2c_slave.h" 1
@@ -19769,6 +19773,7 @@ void slave_init(void);
 
 
 
+uint8_t z,y;
 void __attribute__((picinterrupt(("")))) I2C_Slave_Read();
 # 4 "main.c" 2
 

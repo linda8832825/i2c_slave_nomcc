@@ -1,10 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
-"4349 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
-[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 4349: extern volatile unsigned char SSP1BUF __attribute__((address(0x18C)));
-[v _SSP1BUF `Vuc ~T0 @X0 0 e@396 ]
-"21157
+"21157 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 21157:     struct {
 [s S967 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S967 . SSP1IF BCL1IF SSP2IF BCL2IF TXIF RCIF ]
@@ -34,6 +31,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4953
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 4953: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0x190)));
 [v _SSP1CON1bits `VS237 ~T0 @X0 0 e@400 ]
+"4349
+[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 4349: extern volatile unsigned char SSP1BUF __attribute__((address(0x18C)));
+[v _SSP1BUF `Vuc ~T0 @X0 0 e@396 ]
 "4565
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 4565:     struct {
 [s S222 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -107,6 +107,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "39536
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 39536: extern volatile __bit RA1 __attribute__((address(0x61)));
 [v _RA1 `Vb ~T0 @X0 0 e@97 ]
+"39557
+[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 39557: extern volatile __bit RA2 __attribute__((address(0x62)));
+[v _RA2 `Vb ~T0 @X0 0 e@98 ]
+"39578
+[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 39578: extern volatile __bit RA3 __attribute__((address(0x63)));
+[v _RA3 `Vb ~T0 @X0 0 e@99 ]
 "55 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1658,90 +1664,109 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34907
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 34907: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"4 i2c_slave.c
-[; ;i2c_slave.c: 4: uint8_t z,y;
+"12 ./init.h
+[; ;./init.h: 12: _Bool n;
+[v _n `a ~T0 @X0 1 e ]
+"6 i2c_slave.c
+[; ;i2c_slave.c: 6: uint8_t z,y;
 [v _z `uc ~T0 @X0 1 e ]
 [v _y `uc ~T0 @X0 1 e ]
 [v $root$_I2C_Slave_Read `(v ~T0 @X0 0 e ]
-"5
-[; ;i2c_slave.c: 5: void __attribute__((picinterrupt(("")))) I2C_Slave_Read()
+"7
+[; ;i2c_slave.c: 7: void __attribute__((picinterrupt(("")))) I2C_Slave_Read(){
 [v _I2C_Slave_Read `(v ~T1 @X0 1 ef ]
-"6
-[; ;i2c_slave.c: 6: {
 {
 [e :U _I2C_Slave_Read ]
 [f ]
-"7
-[; ;i2c_slave.c: 7:     SSP1BUF=0x00;
-[e = _SSP1BUF -> -> 0 `i `uc ]
-"8
-[; ;i2c_slave.c: 8:   if(PIR3bits.SSP1IF == 1)
-[e $ ! == -> . . _PIR3bits 0 0 `i -> 1 `i 1563  ]
 "9
-[; ;i2c_slave.c: 9:   {
+[; ;i2c_slave.c: 9:     if(PIR3bits.SSP1IF == 1){
+[e $ ! == -> . . _PIR3bits 0 0 `i -> 1 `i 1563  ]
 {
 "10
-[; ;i2c_slave.c: 10:     SSP1CON1bits.CKP = 0;
+[; ;i2c_slave.c: 10:         SSP1CON1bits.CKP = 0;
 [e = . . _SSP1CON1bits 0 1 -> -> 0 `i `uc ]
 "12
-[; ;i2c_slave.c: 12:     if ((SSP1CON1bits.SSPOV) || (SSP1CON1bits.WCOL)){
+[; ;i2c_slave.c: 12:         if ((SSP1CON1bits.SSPOV) || (SSP1CON1bits.WCOL)){
 [e $ ! || != -> . . _SSP1CON1bits 0 3 `i -> 0 `i != -> . . _SSP1CON1bits 0 4 `i -> 0 `i 1564  ]
 {
-"14
-[; ;i2c_slave.c: 14:       z = SSP1BUF;
+"13
+[; ;i2c_slave.c: 13:             z = SSP1BUF;
 [e = _z _SSP1BUF ]
-"15
-[; ;i2c_slave.c: 15:       SSP1CON1bits.SSPOV = 0;
+"14
+[; ;i2c_slave.c: 14:             SSP1CON1bits.SSPOV = 0;
 [e = . . _SSP1CON1bits 0 3 -> -> 0 `i `uc ]
-"16
-[; ;i2c_slave.c: 16:       SSP1CON1bits.WCOL = 0;
+"15
+[; ;i2c_slave.c: 15:             SSP1CON1bits.WCOL = 0;
 [e = . . _SSP1CON1bits 0 4 -> -> 0 `i `uc ]
-"17
-[; ;i2c_slave.c: 17:       SSP1CON1bits.CKP = 1;
+"16
+[; ;i2c_slave.c: 16:             SSP1CON1bits.CKP = 1;
 [e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
-"18
-[; ;i2c_slave.c: 18:     }
+"17
+[; ;i2c_slave.c: 17:         }
 }
 [e :U 1564 ]
-"20
-[; ;i2c_slave.c: 20:     if(!SSP1STATbits.D_nA && !SSP1STATbits.R_nW){
+"19
+[; ;i2c_slave.c: 19:     if(!SSP1STATbits.D_nA && !SSP1STATbits.R_nW){
 [e $ ! && ! != -> . . _SSP1STATbits 0 5 `i -> 0 `i ! != -> . . _SSP1STATbits 0 2 `i -> 0 `i 1565  ]
 {
-"22
-[; ;i2c_slave.c: 22:       while(!SSP1STATbits.BF);
+"20
+[; ;i2c_slave.c: 20:         while(!SSP1STATbits.BF);
 [e $U 1566  ]
 [e :U 1567 ]
 [e :U 1566 ]
 [e $ ! != -> . . _SSP1STATbits 0 0 `i -> 0 `i 1567  ]
 [e :U 1568 ]
+"21
+[; ;i2c_slave.c: 21:         z = SSP1BUF;
+[e = _z _SSP1BUF ]
+"22
+[; ;i2c_slave.c: 22:         SSP1CON1bits.CKP = 1;
+[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
+"23
+[; ;i2c_slave.c: 23:             while(!SSP1STATbits.BF);
+[e $U 1569  ]
+[e :U 1570 ]
+[e :U 1569 ]
+[e $ ! != -> . . _SSP1STATbits 0 0 `i -> 0 `i 1570  ]
+[e :U 1571 ]
 "24
-[; ;i2c_slave.c: 24:       y=SSP1BUF;
+[; ;i2c_slave.c: 24:             y=SSP1BUF;
 [e = _y _SSP1BUF ]
 "25
-[; ;i2c_slave.c: 25:       if(y==0xDB) RA0=1;
-[e $ ! == -> _y `i -> 219 `i 1569  ]
+[; ;i2c_slave.c: 25:             if(y==0xDB) RA0=1;
+[e $ ! == -> _y `i -> 219 `i 1572  ]
 [e = _RA0 -> -> 1 `i `b ]
-[e :U 1569 ]
+[e :U 1572 ]
 "26
-[; ;i2c_slave.c: 26:       if(y==0x74) RA1=1;
-[e $ ! == -> _y `i -> 116 `i 1570  ]
+[; ;i2c_slave.c: 26:             if(y==0x74) RA1=1;
+[e $ ! == -> _y `i -> 116 `i 1573  ]
 [e = _RA1 -> -> 1 `i `b ]
-[e :U 1570 ]
+[e :U 1573 ]
+"27
+[; ;i2c_slave.c: 27:             if(z==0xDB) RA2=1;
+[e $ ! == -> _z `i -> 219 `i 1574  ]
+[e = _RA2 -> -> 1 `i `b ]
+[e :U 1574 ]
 "28
-[; ;i2c_slave.c: 28:       SSP1CON1bits.CKP = 1;
-[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
+[; ;i2c_slave.c: 28:             if(z==0x74) RA3=1;
+[e $ ! == -> _z `i -> 116 `i 1575  ]
+[e = _RA3 -> -> 1 `i `b ]
+[e :U 1575 ]
 "29
-[; ;i2c_slave.c: 29:     }
+[; ;i2c_slave.c: 29:             SSP1CON1bits.CKP = 1;
+[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
+"30
+[; ;i2c_slave.c: 30:     }
 }
 [e :U 1565 ]
-"39
-[; ;i2c_slave.c: 39:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
 "40
-[; ;i2c_slave.c: 40:   }
+[; ;i2c_slave.c: 40:     PIR3bits.SSP1IF = 0;
+[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+"41
+[; ;i2c_slave.c: 41:     }
 }
 [e :U 1563 ]
-"41
-[; ;i2c_slave.c: 41: }
+"42
+[; ;i2c_slave.c: 42: }
 [e :UE 1562 ]
 }

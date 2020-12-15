@@ -19754,13 +19754,19 @@ extern __bank0 __bit __timeout;
 # 29 "C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\\pic\\include\\xc.h" 2 3
 # 4 "./init.h" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c99\\stdbool.h" 1 3
+# 5 "./init.h" 2
+
 
 void init(void);
 void OSCILLATOR_Initialize(void);
 void PMD_Initialize(void);
 void PIN_MANAGER_Initialize(void);
 void slave_init(void);
+_Bool n;
 # 2 "init.c" 2
+
+
 
 void init(void)
 {
@@ -19870,8 +19876,9 @@ void slave_init(void){
     SSP1CON1 = 0x26;
     SSP1CON2 = 0x01;
     SSP1CON3 = 0x00;
+    SSP1CON3bits.BOEN=1;
     SSP1BUF = 0x00;
-
+    _Bool n=0;
     GIE = 1;
     PEIE = 1;
     PIR3bits.SSP1IF = 0;

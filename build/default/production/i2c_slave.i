@@ -19751,34 +19751,51 @@ extern __bank0 __bit __timeout;
 # 1 "i2c_slave.c" 2
 
 
+# 1 "./init.h" 1
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c99\\stdbool.h" 1 3
+# 5 "./init.h" 2
+
+
+void init(void);
+void OSCILLATOR_Initialize(void);
+void PMD_Initialize(void);
+void PIN_MANAGER_Initialize(void);
+void slave_init(void);
+_Bool n;
+# 3 "i2c_slave.c" 2
+
+
 
 uint8_t z,y;
-void __attribute__((picinterrupt(("")))) I2C_Slave_Read()
-{
-    SSP1BUF=0x00;
-  if(PIR3bits.SSP1IF == 1)
-  {
-    SSP1CON1bits.CKP = 0;
+void __attribute__((picinterrupt(("")))) I2C_Slave_Read(){
 
-    if ((SSP1CON1bits.SSPOV) || (SSP1CON1bits.WCOL)){
+    if(PIR3bits.SSP1IF == 1){
+        SSP1CON1bits.CKP = 0;
 
-      z = SSP1BUF;
-      SSP1CON1bits.SSPOV = 0;
-      SSP1CON1bits.WCOL = 0;
-      SSP1CON1bits.CKP = 1;
-    }
+        if ((SSP1CON1bits.SSPOV) || (SSP1CON1bits.WCOL)){
+            z = SSP1BUF;
+            SSP1CON1bits.SSPOV = 0;
+            SSP1CON1bits.WCOL = 0;
+            SSP1CON1bits.CKP = 1;
+        }
 
     if(!SSP1STATbits.D_nA && !SSP1STATbits.R_nW){
-
-      while(!SSP1STATbits.BF);
-
-      y=SSP1BUF;
-      if(y==0xDB) RA0=1;
-      if(y==0x74) RA1=1;
-
-      SSP1CON1bits.CKP = 1;
+        while(!SSP1STATbits.BF);
+        z = SSP1BUF;
+        SSP1CON1bits.CKP = 1;
+            while(!SSP1STATbits.BF);
+            y=SSP1BUF;
+            if(y==0xDB) RA0=1;
+            if(y==0x74) RA1=1;
+            if(z==0xDB) RA2=1;
+            if(z==0x74) RA3=1;
+            SSP1CON1bits.CKP = 1;
     }
-# 39 "i2c_slave.c"
+# 40 "i2c_slave.c"
     PIR3bits.SSP1IF = 0;
-  }
+    }
 }

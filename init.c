@@ -1,5 +1,7 @@
 #include <pic16f18854.h>
 #include "init.h"
+#include <stdbool.h>
+
 void init(void)
 {
     PMD_Initialize();
@@ -108,8 +110,9 @@ void slave_init(void){
     SSP1CON1 = 0x26;
     SSP1CON2 = 0x01;
     SSP1CON3 = 0x00;
+    SSP1CON3bits.BOEN=1;//更新SSP1BUF
     SSP1BUF = 0x00;
-    
+    bool n=false;//
     GIE = 1;//中斷智能
     PEIE = 1;//中斷智能
     PIR3bits.SSP1IF = 0;//等待傳輸
