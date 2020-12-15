@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.20\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\i2c_18854_slave_nomcc.X.production.sym \
   --cmf=dist/default/production\i2c_18854_slave_nomcc.X.production.cmf -z \
-  -Q16F18854 -oC:\Users\linda\AppData\Local\Temp\sbcs.2 \
+  -Q16F18854 -oC:\Users\linda\AppData\Local\Temp\scpk.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/i2c_18854_slave_nomcc.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=02000h-021EFh -pstack=STACK \
@@ -31,7 +31,7 @@ Linker command line:
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 \
   -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\linda\AppData\Local\Temp\sbcs.o \
+  C:\Users\linda\AppData\Local\Temp\scpk.o \
   dist/default/production\i2c_18854_slave_nomcc.X.production.o 
 
 Object code version is 3.11
@@ -41,18 +41,18 @@ Machine type is 16F18854
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\linda\AppData\Local\Temp\sbcs.o
-                end_init                             5B       5B        2        8       0
+C:\Users\linda\AppData\Local\Temp\scpk.o
+                end_init                             70       70        2        8       0
                 reset_vec                             0        0        2        0       0
 dist/default/production\i2c_18854_slave_nomcc.X.production.o
-                cinit                                5D       5D        7        8       0
-                intentry                              4        4       57        8       0
-                text5                                B9       B9        9        8       0
-                text4                                64       64       32        8       0
-                text3                                C2       C2        8        8       0
-                text2                                96       96       16        8       0
-                text1                                AC       AC        D        8       0
-                maintext                             CA       CA        6        8       0
+                cinit                                72       72        7        8       0
+                intentry                              4        4       6C        8       0
+                text5                                CE       CE        9        8       0
+                text4                                79       79       32        8       0
+                text3                                D7       D7        8        8       0
+                text2                                AB       AB       16        8       0
+                text1                                C1       C1        D        8       0
+                maintext                             DF       DF        6        8       0
                 cstackCOMMON                         73       73        2       70       1
                 bssCOMMON                            70       70        3       70       1
 
@@ -60,16 +60,16 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   STACK          
 
         CLASS   CODE           
-                end_init                             5B       5B        2         0
-                cinit                                5D       5D        7         0
-                intentry                              4        4       57         0
+                end_init                             70       70        2         0
+                cinit                                72       72        7         0
+                intentry                              4        4       6C         0
                 reset_vec                             0        0        2         0
-                text5                                B9       B9        9         0
-                text4                                64       64       32         0
-                text3                                C2       C2        8         0
-                text2                                96       96       16         0
-                text1                                AC       AC        D         0
-                maintext                             CA       CA        6         0
+                text5                                CE       CE        9         0
+                text4                                79       79       32         0
+                text3                                D7       D7        8         0
+                text2                                AB       AB       16         0
+                text1                                C1       C1        D         0
+                maintext                             DF       DF        6         0
 
         CLASS   STRCODE        
 
@@ -229,7 +229,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  0000CC  0000D0         8       0  CODE        2
+                intentry                       000004  0000E1  0000E5         8       0  CODE        2
                 bssCOMMON                      000070  000005  000075        70       1  COMMON      1
 
 
@@ -245,14 +245,14 @@ UNUSED ADDRESS RANGES
         BANK6            0320-032F             10           1
         BIGRAM           2000-21EF            1F0           1
         CODE             0002-0003              2           2
-                         00D0-0FFF            730
+                         00E5-0FFF            71B
         COMMON           0075-007D              9           1
         CONFIG           8007-800B              5           2
         CONST            0002-0003              2           2
-                         00D0-0FFF            100
+                         00E5-0FFF            100
         EEDATA           F000-F0FF            100           2
         ENTRY            0002-0003              2           2
-                         00D0-0FFF            100
+                         00E5-0FFF            100
         IDLOC            8000-8003              4           2
         RAM              0020-006F             50           1
                          00A0-00EF             50
@@ -295,9 +295,9 @@ UNUSED ADDRESS RANGES
         SFR9             0480-04EF             70           1
         STACK            2000-21EF            1F0           1
         STRCODE          0002-0003              2           2
-                         00D0-0FFF            F30
+                         00E5-0FFF            F1B
         STRING           0002-0003              2           2
-                         00D0-0FFF            100
+                         00E5-0FFF            100
 
                                   Symbol Table
 
@@ -321,11 +321,11 @@ _OSCCON1                         (abs)        088D
 _OSCCON3                         (abs)        088F
 _OSCEN                           (abs)        0891
 _OSCFRQ                          (abs)        0893
-_OSCILLATOR_Initialize           text5        00B9
+_OSCILLATOR_Initialize           text5        00CE
 _OSCTUNE                         (abs)        0892
 _PEIE                            (abs)        005E
 _PIE3bits                        (abs)        0719
-_PIN_MANAGER_Initialize          text4        0064
+_PIN_MANAGER_Initialize          text4        0079
 _PIR3bits                        (abs)        070F
 _PMD0                            (abs)        0796
 _PMD1                            (abs)        0797
@@ -333,7 +333,7 @@ _PMD2                            (abs)        0798
 _PMD3                            (abs)        0799
 _PMD4                            (abs)        079A
 _PMD5                            (abs)        079B
-_PMD_Initialize                  text3        00C2
+_PMD_Initialize                  text3        00D7
 _RA0                             (abs)        0060
 _RA1                             (abs)        0061
 _RA2                             (abs)        0062
@@ -397,16 +397,16 @@ __Hbank8                         bank8        0000
 __Hbank9                         bank9        0000
 __Hbigram                        bigram       0000
 __HbssCOMMON                     bssCOMMON    0000
-__Hcinit                         cinit        0064
+__Hcinit                         cinit        0079
 __Hclrtext                       clrtext      0000
 __Hcode                          code         0000
 __Hcommon                        common       0000
 __HcstackCOMMON                  cstackCOMMON 0000
 __Heeprom_data                   eeprom_data  0000
-__Hend_init                      end_init     005D
+__Hend_init                      end_init     0072
 __Hfunctab                       functab      0000
-__Hinit                          init         005B
-__Hintentry                      intentry     005B
+__Hinit                          init         0070
+__Hintentry                      intentry     0070
 __Hmaintext                      maintext     0000
 __Hpowerup                       powerup      0000
 __Hram                           ram          0000
@@ -443,7 +443,7 @@ __Hsfr6                          sfr6         0000
 __Hsfr7                          sfr7         0000
 __Hsfr8                          sfr8         0000
 __Hsfr9                          sfr9         0000
-__Hspace_0                       (abs)        00D0
+__Hspace_0                       (abs)        00E5
 __Hspace_1                       (abs)        0075
 __Hspace_2                       (abs)        0000
 __Hspace_3                       (abs)        0000
@@ -485,15 +485,15 @@ __Lbank8                         bank8        0000
 __Lbank9                         bank9        0000
 __Lbigram                        bigram       0000
 __LbssCOMMON                     bssCOMMON    0000
-__Lcinit                         cinit        005D
+__Lcinit                         cinit        0072
 __Lclrtext                       clrtext      0000
 __Lcode                          code         0000
 __Lcommon                        common       0000
 __LcstackCOMMON                  cstackCOMMON 0000
 __Leeprom_data                   eeprom_data  0000
-__Lend_init                      end_init     005B
+__Lend_init                      end_init     0070
 __Lfunctab                       functab      0000
-__Linit                          init         005B
+__Linit                          init         0070
 __Lintentry                      intentry     0004
 __Lmaintext                      maintext     0000
 __Lpowerup                       powerup      0000
@@ -538,7 +538,7 @@ __Lspace_3                       (abs)        0000
 __Lstack                         stack        0000
 __Lstrings                       strings      0000
 __Ltext                          text         0000
-__S0                             (abs)        00D0
+__S0                             (abs)        00E5
 __S1                             (abs)        0075
 __S2                             (abs)        0000
 __S3                             (abs)        0000
@@ -547,24 +547,24 @@ ___latbits                       (abs)        0001
 ___sp                            stack        0000
 ___stackhi                       (abs)        21EF
 ___stacklo                       (abs)        2000
-__end_of_I2C_Slave_Read          intentry     005B
-__end_of_OSCILLATOR_Initialize   text5        00C2
-__end_of_PIN_MANAGER_Initialize  text4        0096
-__end_of_PMD_Initialize          text3        00CA
-__end_of__initialization         cinit        0060
-__end_of_init                    text1        00B9
-__end_of_main                    maintext     00D0
-__end_of_slave_init              text2        00AC
-__initialization                 cinit        005D
+__end_of_I2C_Slave_Read          intentry     0070
+__end_of_OSCILLATOR_Initialize   text5        00D7
+__end_of_PIN_MANAGER_Initialize  text4        00AB
+__end_of_PMD_Initialize          text3        00DF
+__end_of__initialization         cinit        0075
+__end_of_init                    text1        00CE
+__end_of_main                    maintext     00E5
+__end_of_slave_init              text2        00C1
+__initialization                 cinit        0072
 __pbssCOMMON                     bssCOMMON    0070
 __pcstackCOMMON                  cstackCOMMON 0073
 __pintentry                      intentry     0004
-__pmaintext                      maintext     00CA
-__ptext1                         text1        00AC
-__ptext2                         text2        0096
-__ptext3                         text3        00C2
-__ptext4                         text4        0064
-__ptext5                         text5        00B9
+__pmaintext                      maintext     00DF
+__ptext1                         text1        00C1
+__ptext2                         text2        00AB
+__ptext3                         text3        00D7
+__ptext4                         text4        0079
+__ptext5                         text5        00CE
 __size_of_I2C_Slave_Read         (abs)        0000
 __size_of_OSCILLATOR_Initialize  (abs)        0000
 __size_of_PIN_MANAGER_Initialize (abs)        0000
@@ -572,13 +572,13 @@ __size_of_PMD_Initialize         (abs)        0000
 __size_of_init                   (abs)        0000
 __size_of_main                   (abs)        0000
 __size_of_slave_init             (abs)        0000
-_init                            text1        00AC
-_main                            maintext     00CA
-_slave_init                      text2        0096
+_init                            text1        00C1
+_main                            maintext     00DF
+_slave_init                      text2        00AB
 _y                               bssCOMMON    0070
 _z                               bssCOMMON    0071
 btemp                            (abs)        007E
-end_of_initialization            cinit        0060
+end_of_initialization            cinit        0075
 int$flags                        (abs)        007E
 intlevel0                        functab      0000
 intlevel1                        functab      0000
@@ -587,8 +587,8 @@ intlevel3                        functab      0000
 intlevel4                        functab      0000
 intlevel5                        functab      0000
 reset_vec                        reset_vec    0000
-start                            init         005B
-start_initialization             cinit        005D
+start                            init         0070
+start_initialization             cinit        0072
 wtemp0                           (abs)        007E
 
 
@@ -810,26 +810,26 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 shared
-		__initialization		CODE           	005D	0000	4
+		__initialization		CODE           	0072	0000	4
 
 shared estimated size: 4
 
 i2c_slave.c
-		_I2C_Slave_Read		CODE           	0004	0000	88
+		_I2C_Slave_Read		CODE           	0004	0000	109
 
-i2c_slave.c estimated size: 88
+i2c_slave.c estimated size: 109
 
 init.c
-		_init          		CODE           	00AC	0000	14
-		_PIN_MANAGER_Initialize		CODE           	0064	0000	51
-		_slave_init    		CODE           	0096	0000	23
-		_PMD_Initialize		CODE           	00C2	0000	9
-		_OSCILLATOR_Initialize		CODE           	00B9	0000	10
+		_init          		CODE           	00C1	0000	14
+		_PIN_MANAGER_Initialize		CODE           	0079	0000	51
+		_slave_init    		CODE           	00AB	0000	23
+		_PMD_Initialize		CODE           	00D7	0000	9
+		_OSCILLATOR_Initialize		CODE           	00CE	0000	10
 
 init.c estimated size: 107
 
 main.c
-		_main          		CODE           	00CA	0000	7
+		_main          		CODE           	00DF	0000	7
 
 main.c estimated size: 7
 

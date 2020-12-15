@@ -27,15 +27,15 @@ void __interrupt() I2C_Slave_Read(){
         if(z==0x74) RA3=1;//slave接收正確
         SSP1CON1bits.CKP = 1; //恢復SCL的動作
     }
-    //    else if(!SSP1STATbits.D_nA && SSP1STATbits.R_nW)//傳送slave的資料給master讀
-    //    {
-    //      z = SSP1BUF;
-    //      SSP1STATbits.BF = 0;
-    //      SSP1BUF = PORTA ;
-    //      SSP1CON1bits.CKP = 1;
-    //      while(SSP1STATbits.BF);
-    //    }
+        
+    else if(!SSP1STATbits.D_nA && SSP1STATbits.R_nW){//傳送slave的資料給master讀
+        z = SSP1BUF;//清空SSP1BUF
+        SSP1STATbits.BF = 0;//清空SSP1BUF
+        SSP1BUF = y; //傳資料給MASTER
+        SSP1CON1bits.CKP = 1; //恢復SCL的動作
+        while(SSP1STATbits.BF);
+    }
 
-    PIR3bits.SSP1IF = 0;
+    PIR3bits.SSP1IF = 0;//正在傳輸
     }
 }

@@ -1758,7 +1758,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29
 [; ;i2c_slave.c: 29:     }
 }
+[e $U 1576  ]
+"31
+[; ;i2c_slave.c: 31:     else if(!SSP1STATbits.D_nA && SSP1STATbits.R_nW){
 [e :U 1565 ]
+[e $ ! && ! != -> . . _SSP1STATbits 0 5 `i -> 0 `i != -> . . _SSP1STATbits 0 2 `i -> 0 `i 1577  ]
+{
+"32
+[; ;i2c_slave.c: 32:         z = SSP1BUF;
+[e = _z _SSP1BUF ]
+"33
+[; ;i2c_slave.c: 33:         SSP1STATbits.BF = 0;
+[e = . . _SSP1STATbits 0 0 -> -> 0 `i `uc ]
+"34
+[; ;i2c_slave.c: 34:         SSP1BUF = y;
+[e = _SSP1BUF _y ]
+"35
+[; ;i2c_slave.c: 35:         SSP1CON1bits.CKP = 1;
+[e = . . _SSP1CON1bits 0 1 -> -> 1 `i `uc ]
+"36
+[; ;i2c_slave.c: 36:         while(SSP1STATbits.BF);
+[e $U 1578  ]
+[e :U 1579 ]
+[e :U 1578 ]
+[e $ != -> . . _SSP1STATbits 0 0 `i -> 0 `i 1579  ]
+[e :U 1580 ]
+"37
+[; ;i2c_slave.c: 37:     }
+}
+[e :U 1577 ]
+[e :U 1576 ]
 "39
 [; ;i2c_slave.c: 39:     PIR3bits.SSP1IF = 0;
 [e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]

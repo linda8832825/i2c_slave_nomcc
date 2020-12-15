@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
-                                                                                               Tue Dec 15 10:32:55 2020
+                                                                                               Tue Dec 15 10:56:39 2020
 
 Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1 
      1                           	processor	16F18854
@@ -2189,22 +2189,22 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2175  0F4E                     _ANSELC	set	3918
   2176                           
   2177                           	psect	cinit
-  2178  005D                     start_initialization:	
+  2178  0072                     start_initialization:	
   2179                           ; #config settings
   2180                           
-  2181  005D                     __initialization:
+  2181  0072                     __initialization:
   2182                           
   2183                           ; Clear objects allocated to COMMON
-  2184  005D  01F0               	clrf	__pbssCOMMON& (0+127)
-  2185  005E  01F1               	clrf	(__pbssCOMMON+1)& (0+127)
-  2186  005F  01F2               	clrf	(__pbssCOMMON+2)& (0+127)
-  2187  0060                     end_of_initialization:	
+  2184  0072  01F0               	clrf	__pbssCOMMON& (0+127)
+  2185  0073  01F1               	clrf	(__pbssCOMMON+1)& (0+127)
+  2186  0074  01F2               	clrf	(__pbssCOMMON+2)& (0+127)
+  2187  0075                     end_of_initialization:	
   2188                           ;End of C runtime variable initialization code
   2189                           
-  2190  0060                     __end_of__initialization:
-  2191  0060  107E               	bcf	int$flags,0	;clear compiler interrupt flag (level 1)
-  2192  0061  0020               	movlb	0
-  2193  0062  3180  28CA         	ljmp	_main	;jump to C main() function
+  2190  0075                     __end_of__initialization:
+  2191  0075  107E               	bcf	int$flags,0	;clear compiler interrupt flag (level 1)
+  2192  0076  0020               	movlb	0
+  2193  0077  3180  28DF         	ljmp	_main	;jump to C main() function
   2194                           
   2195                           	psect	bssCOMMON
   2196  0070                     __pbssCOMMON:
@@ -2261,7 +2261,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2247                           
   2248                           
   2249                           	psect	maintext
-  2250  00CA                     __pmaintext:	
+  2250  00DF                     __pmaintext:	
   2251                           ; 1 bytes @ 0x2
   2252 ;;
   2253 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
@@ -2297,24 +2297,24 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2283                           
   2284                           
   2285                           ;psect for function _main
-  2286  00CA                     _main:
-  2287  00CA                     l857:	
+  2286  00DF                     _main:
+  2287  00DF                     l862:	
   2288                           ;incstack = 0
   2289                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
   2290                           
   2291                           
   2292                           ;main.c: 8:   init();
-  2293  00CA  3180  20AC  3180   	fcall	_init
-  2294  00CD                     l13:	
+  2293  00DF  3180  20C1  3180   	fcall	_init
+  2294  00E2                     l13:	
   2295                           ;main.c: 9:   while(1);
   2296                           
-  2297  00CD                     l14:
-  2298  00CD  28CD               	goto	l13
-  2299  00CE  3180  285B         	ljmp	start
-  2300  00D0                     __end_of_main:
+  2297  00E2                     l14:
+  2298  00E2  28E2               	goto	l13
+  2299  00E3  3180  2870         	ljmp	start
+  2300  00E5                     __end_of_main:
   2301                           
   2302                           	psect	text1
-  2303  00AC                     __ptext1:	
+  2303  00C1                     __ptext1:	
   2304 ;; *************** function _init *****************
   2305 ;; Defined at:
   2306 ;;		line 5 in file "init.c"
@@ -2350,32 +2350,32 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2336                           
   2337                           
   2338                           ;psect for function _init
-  2339  00AC                     _init:
-  2340  00AC                     l849:	
+  2339  00C1                     _init:
+  2340  00C1                     l854:	
   2341                           ;incstack = 0
   2342                           ; Regs used in _init: [wreg+status,2+status,0+pclath+cstack]
   2343                           
   2344                           
   2345                           ;init.c: 7:     PMD_Initialize();
-  2346  00AC  3180  20C2  3180   	fcall	_PMD_Initialize
-  2347  00AF                     l851:
+  2346  00C1  3180  20D7  3180   	fcall	_PMD_Initialize
+  2347  00C4                     l856:
   2348                           
   2349                           ;init.c: 8:     PIN_MANAGER_Initialize();
-  2350  00AF  3180  2064  3180   	fcall	_PIN_MANAGER_Initialize
-  2351  00B2                     l853:
+  2350  00C4  3180  2079  3180   	fcall	_PIN_MANAGER_Initialize
+  2351  00C7                     l858:
   2352                           
   2353                           ;init.c: 9:     OSCILLATOR_Initialize();
-  2354  00B2  3180  20B9  3180   	fcall	_OSCILLATOR_Initialize
-  2355  00B5                     l855:
+  2354  00C7  3180  20CE  3180   	fcall	_OSCILLATOR_Initialize
+  2355  00CA                     l860:
   2356                           
   2357                           ;init.c: 10:     slave_init();
-  2358  00B5  3180  2096  3180   	fcall	_slave_init
-  2359  00B8                     l173:
-  2360  00B8  0008               	return
-  2361  00B9                     __end_of_init:
+  2358  00CA  3180  20AB  3180   	fcall	_slave_init
+  2359  00CD                     l178:
+  2360  00CD  0008               	return
+  2361  00CE                     __end_of_init:
   2362                           
   2363                           	psect	text2
-  2364  0096                     __ptext2:	
+  2364  00AB                     __ptext2:	
   2365 ;; *************** function _slave_init *****************
   2366 ;; Defined at:
   2367 ;;		line 106 in file "init.c"
@@ -2408,76 +2408,76 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2394                           
   2395                           
   2396                           ;psect for function _slave_init
-  2397  0096                     _slave_init:
-  2398  0096                     l827:	
+  2397  00AB                     _slave_init:
+  2398  00AB                     l832:	
   2399                           ;incstack = 0
   2400                           ; Regs used in _slave_init: [wreg+status,2]
   2401                           
   2402                           
   2403                           ;init.c: 107:     SSP1STAT = 0xC0;
-  2404  0096  30C0               	movlw	192
-  2405  0097  0023               	movlb	3	; select bank3
-  2406  0098  008F               	movwf	15	;volatile
+  2404  00AB  30C0               	movlw	192
+  2405  00AC  0023               	movlb	3	; select bank3
+  2406  00AD  008F               	movwf	15	;volatile
   2407                           
   2408                           ;init.c: 108:     SSP1ADD = (uint8_t)(0x3A<<1);
-  2409  0099  3074               	movlw	116
-  2410  009A  008D               	movwf	13	;volatile
+  2409  00AE  3074               	movlw	116
+  2410  00AF  008D               	movwf	13	;volatile
   2411                           
   2412                           ;init.c: 109:     SSP1MSK = 0xFF;
-  2413  009B  30FF               	movlw	255
-  2414  009C  008E               	movwf	14	;volatile
+  2413  00B0  30FF               	movlw	255
+  2414  00B1  008E               	movwf	14	;volatile
   2415                           
   2416                           ;init.c: 110:     SSP1CON1 = 0x26;
-  2417  009D  3026               	movlw	38
-  2418  009E  0090               	movwf	16	;volatile
+  2417  00B2  3026               	movlw	38
+  2418  00B3  0090               	movwf	16	;volatile
   2419                           
   2420                           ;init.c: 111:     SSP1CON2 = 0x01;
-  2421  009F  3001               	movlw	1
-  2422  00A0  0091               	movwf	17	;volatile
-  2423  00A1                     l829:
+  2421  00B4  3001               	movlw	1
+  2422  00B5  0091               	movwf	17	;volatile
+  2423  00B6                     l834:
   2424                           
   2425                           ;init.c: 112:     SSP1CON3 = 0x00;
-  2426  00A1  0192               	clrf	18	;volatile
-  2427  00A2                     l831:
+  2426  00B6  0192               	clrf	18	;volatile
+  2427  00B7                     l836:
   2428                           
   2429                           ;init.c: 113:     SSP1CON3bits.BOEN=1;
-  2430  00A2  1612               	bsf	18,4	;volatile
-  2431  00A3                     l833:
+  2430  00B7  1612               	bsf	18,4	;volatile
+  2431  00B8                     l838:
   2432                           
   2433                           ;init.c: 114:     SSP1BUF = 0x00;
-  2434  00A3  018C               	clrf	12	;volatile
-  2435  00A4                     l835:
-  2436  00A4                     l837:
+  2434  00B8  018C               	clrf	12	;volatile
+  2435  00B9                     l840:
+  2436  00B9                     l842:
   2437                           
   2438                           ;init.c: 116:     GIE = 1;
-  2439  00A4  178B               	bsf	11,7	;volatile
-  2440  00A5                     l839:
+  2439  00B9  178B               	bsf	11,7	;volatile
+  2440  00BA                     l844:
   2441                           
   2442                           ;init.c: 117:     PEIE = 1;
-  2443  00A5  170B               	bsf	11,6	;volatile
-  2444  00A6                     l841:
+  2443  00BA  170B               	bsf	11,6	;volatile
+  2444  00BB                     l846:
   2445                           
   2446                           ;init.c: 118:     PIR3bits.SSP1IF = 0;
-  2447  00A6  002E               	movlb	14	; select bank14
-  2448  00A7  100F               	bcf	15,0	;volatile
-  2449  00A8                     l843:
+  2447  00BB  002E               	movlb	14	; select bank14
+  2448  00BC  100F               	bcf	15,0	;volatile
+  2449  00BD                     l848:
   2450                           
   2451                           ;init.c: 119:     PIR3bits.BCL1IF = 0;
-  2452  00A8  108F               	bcf	15,1	;volatile
-  2453  00A9                     l845:
+  2452  00BD  108F               	bcf	15,1	;volatile
+  2453  00BE                     l850:
   2454                           
   2455                           ;init.c: 120:     PIE3bits.SSP1IE = 1;
-  2456  00A9  1419               	bsf	25,0	;volatile
-  2457  00AA                     l847:
+  2456  00BE  1419               	bsf	25,0	;volatile
+  2457  00BF                     l852:
   2458                           
   2459                           ;init.c: 121:     PIE3bits.BCL1IE = 1;
-  2460  00AA  1499               	bsf	25,1	;volatile
-  2461  00AB                     l185:
-  2462  00AB  0008               	return
-  2463  00AC                     __end_of_slave_init:
+  2460  00BF  1499               	bsf	25,1	;volatile
+  2461  00C0                     l190:
+  2462  00C0  0008               	return
+  2463  00C1                     __end_of_slave_init:
   2464                           
   2465                           	psect	text3
-  2466  00C2                     __ptext3:	
+  2466  00D7                     __ptext3:	
   2467 ;; *************** function _PMD_Initialize *****************
   2468 ;; Defined at:
   2469 ;;		line 27 in file "init.c"
@@ -2510,36 +2510,36 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2496                           
   2497                           
   2498                           ;psect for function _PMD_Initialize
-  2499  00C2                     _PMD_Initialize:
-  2500  00C2                     l795:	
+  2499  00D7                     _PMD_Initialize:
+  2500  00D7                     l800:	
   2501                           ;incstack = 0
   2502                           ; Regs used in _PMD_Initialize: [status,2]
   2503                           
   2504                           
   2505                           ;init.c: 30:     PMD0 = 0x00;
-  2506  00C2  002F               	movlb	15	; select bank15
-  2507  00C3  0196               	clrf	22	;volatile
+  2506  00D7  002F               	movlb	15	; select bank15
+  2507  00D8  0196               	clrf	22	;volatile
   2508                           
   2509                           ;init.c: 32:     PMD1 = 0x00;
-  2510  00C4  0197               	clrf	23	;volatile
+  2510  00D9  0197               	clrf	23	;volatile
   2511                           
   2512                           ;init.c: 34:     PMD2 = 0x00;
-  2513  00C5  0198               	clrf	24	;volatile
+  2513  00DA  0198               	clrf	24	;volatile
   2514                           
   2515                           ;init.c: 36:     PMD3 = 0x00;
-  2516  00C6  0199               	clrf	25	;volatile
+  2516  00DB  0199               	clrf	25	;volatile
   2517                           
   2518                           ;init.c: 38:     PMD4 = 0x00;
-  2519  00C7  019A               	clrf	26	;volatile
+  2519  00DC  019A               	clrf	26	;volatile
   2520                           
   2521                           ;init.c: 40:     PMD5 = 0x00;
-  2522  00C8  019B               	clrf	27	;volatile
-  2523  00C9                     l179:
-  2524  00C9  0008               	return
-  2525  00CA                     __end_of_PMD_Initialize:
+  2522  00DD  019B               	clrf	27	;volatile
+  2523  00DE                     l184:
+  2524  00DE  0008               	return
+  2525  00DF                     __end_of_PMD_Initialize:
   2526                           
   2527                           	psect	text4
-  2528  0064                     __ptext4:	
+  2528  0079                     __ptext4:	
   2529 ;; *************** function _PIN_MANAGER_Initialize *****************
   2530 ;; Defined at:
   2531 ;;		line 43 in file "init.c"
@@ -2572,134 +2572,134 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2558                           
   2559                           
   2560                           ;psect for function _PIN_MANAGER_Initialize
-  2561  0064                     _PIN_MANAGER_Initialize:
-  2562  0064                     l797:	
+  2561  0079                     _PIN_MANAGER_Initialize:
+  2562  0079                     l802:	
   2563                           ;incstack = 0
   2564                           ; Regs used in _PIN_MANAGER_Initialize: [wreg+status,2]
   2565                           
   2566                           
   2567                           ;init.c: 48:     LATA = 0x00;
-  2568  0064  0020               	movlb	0	; select bank0
-  2569  0065  0196               	clrf	22	;volatile
+  2568  0079  0020               	movlb	0	; select bank0
+  2569  007A  0196               	clrf	22	;volatile
   2570                           
   2571                           ;init.c: 49:     LATB = 0x00;
-  2572  0066  0197               	clrf	23	;volatile
+  2572  007B  0197               	clrf	23	;volatile
   2573                           
   2574                           ;init.c: 50:     LATC = 0x00;
-  2575  0067  0198               	clrf	24	;volatile
+  2575  007C  0198               	clrf	24	;volatile
   2576                           
   2577                           ;init.c: 55:     TRISA = 0x00;
-  2578  0068  0191               	clrf	17	;volatile
-  2579  0069                     l799:
+  2578  007D  0191               	clrf	17	;volatile
+  2579  007E                     l804:
   2580                           
   2581                           ;init.c: 56:     TRISB = 0xFF;
-  2582  0069  30FF               	movlw	255
-  2583  006A  0092               	movwf	18	;volatile
-  2584  006B                     l801:
+  2582  007E  30FF               	movlw	255
+  2583  007F  0092               	movwf	18	;volatile
+  2584  0080                     l806:
   2585                           
   2586                           ;init.c: 57:     TRISC = 0xFF;
-  2587  006B  30FF               	movlw	255
-  2588  006C  0093               	movwf	19	;volatile
-  2589  006D                     l803:
+  2587  0080  30FF               	movlw	255
+  2588  0081  0093               	movwf	19	;volatile
+  2589  0082                     l808:
   2590                           
   2591                           ;init.c: 62:     ANSELC = 0xE7;
-  2592  006D  30E7               	movlw	231
-  2593  006E  003E               	movlb	30	; select bank30
-  2594  006F  00CE               	movwf	78	;volatile
-  2595  0070                     l805:
+  2592  0082  30E7               	movlw	231
+  2593  0083  003E               	movlb	30	; select bank30
+  2594  0084  00CE               	movwf	78	;volatile
+  2595  0085                     l810:
   2596                           
   2597                           ;init.c: 63:     ANSELB = 0xFF;
-  2598  0070  30FF               	movlw	255
-  2599  0071  00C3               	movwf	67	;volatile
+  2598  0085  30FF               	movlw	255
+  2599  0086  00C3               	movwf	67	;volatile
   2600                           
   2601                           ;init.c: 64:     ANSELA = 0x00;
-  2602  0072  01B8               	clrf	56	;volatile
+  2602  0087  01B8               	clrf	56	;volatile
   2603                           
   2604                           ;init.c: 69:     WPUE = 0x00;
-  2605  0073  01E5               	clrf	101	;volatile
+  2605  0088  01E5               	clrf	101	;volatile
   2606                           
   2607                           ;init.c: 70:     WPUB = 0x00;
-  2608  0074  01C4               	clrf	68	;volatile
+  2608  0089  01C4               	clrf	68	;volatile
   2609                           
   2610                           ;init.c: 71:     WPUA = 0x00;
-  2611  0075  01B9               	clrf	57	;volatile
+  2611  008A  01B9               	clrf	57	;volatile
   2612                           
   2613                           ;init.c: 72:     WPUC = 0x00;
-  2614  0076  01CF               	clrf	79	;volatile
+  2614  008B  01CF               	clrf	79	;volatile
   2615                           
   2616                           ;init.c: 77:     ODCONA = 0x00;
-  2617  0077  01BA               	clrf	58	;volatile
+  2617  008C  01BA               	clrf	58	;volatile
   2618                           
   2619                           ;init.c: 78:     ODCONB = 0x00;
-  2620  0078  01C5               	clrf	69	;volatile
+  2620  008D  01C5               	clrf	69	;volatile
   2621                           
   2622                           ;init.c: 79:     ODCONC = 0x00;
-  2623  0079  01D0               	clrf	80	;volatile
-  2624  007A                     l807:
+  2623  008E  01D0               	clrf	80	;volatile
+  2624  008F                     l812:
   2625                           
   2626                           ;init.c: 84:     SLRCONA = 0xFF;
-  2627  007A  30FF               	movlw	255
-  2628  007B  00BB               	movwf	59	;volatile
-  2629  007C                     l809:
+  2627  008F  30FF               	movlw	255
+  2628  0090  00BB               	movwf	59	;volatile
+  2629  0091                     l814:
   2630                           
   2631                           ;init.c: 85:     SLRCONB = 0xFF;
-  2632  007C  30FF               	movlw	255
-  2633  007D  00C6               	movwf	70	;volatile
-  2634  007E                     l811:
+  2632  0091  30FF               	movlw	255
+  2633  0092  00C6               	movwf	70	;volatile
+  2634  0093                     l816:
   2635                           
   2636                           ;init.c: 86:     SLRCONC = 0xFF;
-  2637  007E  30FF               	movlw	255
-  2638  007F  00D1               	movwf	81	;volatile
-  2639  0080                     l813:
+  2637  0093  30FF               	movlw	255
+  2638  0094  00D1               	movwf	81	;volatile
+  2639  0095                     l818:
   2640                           
   2641                           ;init.c: 91:     INLVLA = 0x00;
-  2642  0080  01BC               	clrf	60	;volatile
+  2642  0095  01BC               	clrf	60	;volatile
   2643                           
   2644                           ;init.c: 92:     INLVLB = 0xFF;
-  2645  0081  30FF               	movlw	255
-  2646  0082  00C7               	movwf	71	;volatile
+  2645  0096  30FF               	movlw	255
+  2646  0097  00C7               	movwf	71	;volatile
   2647                           
   2648                           ;init.c: 93:     INLVLC = 0xFF;
-  2649  0083  30FF               	movlw	255
-  2650  0084  00D2               	movwf	82	;volatile
+  2649  0098  30FF               	movlw	255
+  2650  0099  00D2               	movwf	82	;volatile
   2651                           
   2652                           ;init.c: 94:     INLVLE = 0x08;
-  2653  0085  3008               	movlw	8
-  2654  0086  00E8               	movwf	104	;volatile
+  2653  009A  3008               	movlw	8
+  2654  009B  00E8               	movwf	104	;volatile
   2655                           
   2656                           ;init.c: 96:     SSP1CLKPPS = 0x13;
-  2657  0087  3013               	movlw	19
-  2658  0088  003D               	movlb	29	; select bank29
-  2659  0089  00C5               	movwf	69	;volatile
+  2657  009C  3013               	movlw	19
+  2658  009D  003D               	movlb	29	; select bank29
+  2659  009E  00C5               	movwf	69	;volatile
   2660                           
   2661                           ;init.c: 97:     RC3PPS = 0x14;
-  2662  008A  3014               	movlw	20
-  2663  008B  003E               	movlb	30	; select bank30
-  2664  008C  00A3               	movwf	35	;volatile
+  2662  009F  3014               	movlw	20
+  2663  00A0  003E               	movlb	30	; select bank30
+  2664  00A1  00A3               	movwf	35	;volatile
   2665                           
   2666                           ;init.c: 98:     RC4PPS = 0x15;
-  2667  008D  3015               	movlw	21
-  2668  008E  00A4               	movwf	36	;volatile
+  2667  00A2  3015               	movlw	21
+  2668  00A3  00A4               	movwf	36	;volatile
   2669                           
   2670                           ;init.c: 99:     SSP1DATPPS = 0x14;
-  2671  008F  3014               	movlw	20
-  2672  0090  003D               	movlb	29	; select bank29
-  2673  0091  00C6               	movwf	70	;volatile
-  2674  0092                     l815:
+  2671  00A4  3014               	movlw	20
+  2672  00A5  003D               	movlb	29	; select bank29
+  2673  00A6  00C6               	movwf	70	;volatile
+  2674  00A7                     l820:
   2675                           
   2676                           ;init.c: 100:     ANSELCbits.ANSC3=0;
-  2677  0092  003E               	movlb	30	; select bank30
-  2678  0093  11CE               	bcf	78,3	;volatile
-  2679  0094                     l817:
+  2677  00A7  003E               	movlb	30	; select bank30
+  2678  00A8  11CE               	bcf	78,3	;volatile
+  2679  00A9                     l822:
   2680                           
   2681                           ;init.c: 101:     ANSELCbits.ANSC4=0;
-  2682  0094  124E               	bcf	78,4	;volatile
-  2683  0095                     l182:
-  2684  0095  0008               	return
-  2685  0096                     __end_of_PIN_MANAGER_Initialize:
+  2682  00A9  124E               	bcf	78,4	;volatile
+  2683  00AA                     l187:
+  2684  00AA  0008               	return
+  2685  00AB                     __end_of_PIN_MANAGER_Initialize:
   2686                           
   2687                           	psect	text5
-  2688  00B9                     __ptext5:	
+  2688  00CE                     __ptext5:	
   2689 ;; *************** function _OSCILLATOR_Initialize *****************
   2690 ;; Defined at:
   2691 ;;		line 13 in file "init.c"
@@ -2732,35 +2732,35 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2718                           
   2719                           
   2720                           ;psect for function _OSCILLATOR_Initialize
-  2721  00B9                     _OSCILLATOR_Initialize:
-  2722  00B9                     l819:	
+  2721  00CE                     _OSCILLATOR_Initialize:
+  2722  00CE                     l824:	
   2723                           ;incstack = 0
   2724                           ; Regs used in _OSCILLATOR_Initialize: [wreg+status,2]
   2725                           
   2726                           
   2727                           ;init.c: 16:     OSCCON1 = 0x60;
-  2728  00B9  3060               	movlw	96
-  2729  00BA  0031               	movlb	17	; select bank17
-  2730  00BB  008D               	movwf	13	;volatile
-  2731  00BC                     l821:
+  2728  00CE  3060               	movlw	96
+  2729  00CF  0031               	movlb	17	; select bank17
+  2730  00D0  008D               	movwf	13	;volatile
+  2731  00D1                     l826:
   2732                           
   2733                           ;init.c: 18:     OSCCON3 = 0x00;
-  2734  00BC  018F               	clrf	15	;volatile
-  2735  00BD                     l823:
+  2734  00D1  018F               	clrf	15	;volatile
+  2735  00D2                     l828:
   2736                           
   2737                           ;init.c: 20:     OSCEN = 0x00;
-  2738  00BD  0191               	clrf	17	;volatile
+  2738  00D2  0191               	clrf	17	;volatile
   2739                           
   2740                           ;init.c: 22:     OSCFRQ = 0x02;
-  2741  00BE  3002               	movlw	2
-  2742  00BF  0093               	movwf	19	;volatile
-  2743  00C0                     l825:
+  2741  00D3  3002               	movlw	2
+  2742  00D4  0093               	movwf	19	;volatile
+  2743  00D5                     l830:
   2744                           
   2745                           ;init.c: 24:     OSCTUNE = 0x00;
-  2746  00C0  0192               	clrf	18	;volatile
-  2747  00C1                     l176:
-  2748  00C1  0008               	return
-  2749  00C2                     __end_of_OSCILLATOR_Initialize:
+  2746  00D5  0192               	clrf	18	;volatile
+  2747  00D6                     l181:
+  2748  00D6  0008               	return
+  2749  00D7                     __end_of_OSCILLATOR_Initialize:
   2750                           
   2751                           	psect	intentry
   2752  0004                     __pintentry:	
@@ -2800,7 +2800,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2786                           
   2787                           ; Regs used in _I2C_Slave_Read: [wreg+status,2+status,0]
   2788  0005  3180               	pagesel	$
-  2789  0006                     i1l859:
+  2789  0006                     i1l864:
   2790                           
   2791                           ;i2c_slave.c: 8:     if(PIR3bits.SSP1IF == 1){
   2792  0006  002E               	movlb	14	; select bank14
@@ -2808,9 +2808,9 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2794  0008  280A               	goto	u1_21
   2795  0009  280B               	goto	u1_20
   2796  000A                     u1_21:
-  2797  000A  2859               	goto	i1l58
+  2797  000A  286E               	goto	i1l63
   2798  000B                     u1_20:
-  2799  000B                     i1l861:
+  2799  000B                     i1l866:
   2800                           
   2801                           ;i2c_slave.c: 9:         SSP1CON1bits.CKP = 0;
   2802  000B  0023               	movlb	3	; select bank3
@@ -2821,49 +2821,49 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2807  000E  2810               	goto	u2_21
   2808  000F  2811               	goto	u2_20
   2809  0010                     u2_21:
-  2810  0010  2815               	goto	i1l865
+  2810  0010  2815               	goto	i1l870
   2811  0011                     u2_20:
-  2812  0011                     i1l863:
+  2812  0011                     i1l868:
   2813  0011  1F90               	btfss	16,7	;volatile
   2814  0012  2814               	goto	u3_21
   2815  0013  2815               	goto	u3_20
   2816  0014                     u3_21:
-  2817  0014  281C               	goto	i1l873
+  2817  0014  281C               	goto	i1l878
   2818  0015                     u3_20:
-  2819  0015                     i1l865:
+  2819  0015                     i1l870:
   2820                           
   2821                           ;i2c_slave.c: 12:             z = SSP1BUF;
   2822  0015  080C               	movf	12,w	;volatile
   2823  0016  00F3               	movwf	??_I2C_Slave_Read
   2824  0017  0873               	movf	??_I2C_Slave_Read,w
   2825  0018  00F1               	movwf	_z
-  2826  0019                     i1l867:
+  2826  0019                     i1l872:
   2827                           
   2828                           ;i2c_slave.c: 13:             SSP1CON1bits.SSPOV = 0;
   2829  0019  1310               	bcf	16,6	;volatile
-  2830  001A                     i1l869:
+  2830  001A                     i1l874:
   2831                           
   2832                           ;i2c_slave.c: 14:             SSP1CON1bits.WCOL = 0;
   2833  001A  1390               	bcf	16,7	;volatile
-  2834  001B                     i1l871:
+  2834  001B                     i1l876:
   2835                           
   2836                           ;i2c_slave.c: 15:             SSP1CON1bits.CKP = 1;
   2837  001B  1610               	bsf	16,4	;volatile
-  2838  001C                     i1l873:
+  2838  001C                     i1l878:
   2839                           
   2840                           ;i2c_slave.c: 18:     if(!SSP1STATbits.D_nA && !SSP1STATbits.R_nW){
   2841  001C  1A8F               	btfsc	15,5	;volatile
   2842  001D  281F               	goto	u4_21
   2843  001E  2820               	goto	u4_20
   2844  001F                     u4_21:
-  2845  001F  2857               	goto	i1l47
+  2845  001F  2858               	goto	i1l47
   2846  0020                     u4_20:
-  2847  0020                     i1l875:
+  2847  0020                     i1l880:
   2848  0020  190F               	btfsc	15,2	;volatile
   2849  0021  2823               	goto	u5_21
   2850  0022  2824               	goto	u5_20
   2851  0023                     u5_21:
-  2852  0023  2857               	goto	i1l47
+  2852  0023  2858               	goto	i1l47
   2853  0024                     u5_20:
   2854  0024                     i1l48:
   2855  0024  1C0F               	btfss	15,0	;volatile
@@ -2872,14 +2872,14 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2858  0027                     u6_21:
   2859  0027  2824               	goto	i1l48
   2860  0028                     u6_20:
-  2861  0028                     i1l879:
+  2861  0028                     i1l884:
   2862                           
   2863                           ;i2c_slave.c: 20:         z = SSP1BUF;
   2864  0028  080C               	movf	12,w	;volatile
   2865  0029  00F3               	movwf	??_I2C_Slave_Read
   2866  002A  0873               	movf	??_I2C_Slave_Read,w
   2867  002B  00F1               	movwf	_z
-  2868  002C                     i1l881:
+  2868  002C                     i1l886:
   2869                           
   2870                           ;i2c_slave.c: 21:         SSP1CON1bits.CKP = 1;
   2871  002C  1610               	bsf	16,4	;volatile
@@ -2892,14 +2892,14 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2878  0030                     u7_21:
   2879  0030  282D               	goto	i1l51
   2880  0031                     u7_20:
-  2881  0031                     i1l883:
+  2881  0031                     i1l888:
   2882                           
   2883                           ;i2c_slave.c: 23:         y=SSP1BUF;
   2884  0031  080C               	movf	12,w	;volatile
   2885  0032  00F3               	movwf	??_I2C_Slave_Read
   2886  0033  0873               	movf	??_I2C_Slave_Read,w
   2887  0034  00F0               	movwf	_y
-  2888  0035                     i1l885:
+  2888  0035                     i1l890:
   2889                           
   2890                           ;i2c_slave.c: 24:         if(y==0xDB) RA0=1;
   2891  0035  30DB               	movlw	219
@@ -2908,12 +2908,12 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2894  0038  283A               	goto	u8_21
   2895  0039  283B               	goto	u8_20
   2896  003A                     u8_21:
-  2897  003A  283D               	goto	i1l889
+  2897  003A  283D               	goto	i1l894
   2898  003B                     u8_20:
-  2899  003B                     i1l887:
+  2899  003B                     i1l892:
   2900  003B  0020               	movlb	0	; select bank0
   2901  003C  140C               	bsf	12,0	;volatile
-  2902  003D                     i1l889:
+  2902  003D                     i1l894:
   2903                           
   2904                           ;i2c_slave.c: 25:         if(y==0x74) RA1=1;
   2905  003D  3074               	movlw	116
@@ -2922,12 +2922,12 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2908  0040  2842               	goto	u9_21
   2909  0041  2843               	goto	u9_20
   2910  0042                     u9_21:
-  2911  0042  2845               	goto	i1l893
+  2911  0042  2845               	goto	i1l898
   2912  0043                     u9_20:
-  2913  0043                     i1l891:
+  2913  0043                     i1l896:
   2914  0043  0020               	movlb	0	; select bank0
   2915  0044  148C               	bsf	12,1	;volatile
-  2916  0045                     i1l893:
+  2916  0045                     i1l898:
   2917                           
   2918                           ;i2c_slave.c: 26:         if(z==0xDB) RA2=1;
   2919  0045  30DB               	movlw	219
@@ -2936,12 +2936,12 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2922  0048  284A               	goto	u10_21
   2923  0049  284B               	goto	u10_20
   2924  004A                     u10_21:
-  2925  004A  284D               	goto	i1l897
+  2925  004A  284D               	goto	i1l902
   2926  004B                     u10_20:
-  2927  004B                     i1l895:
+  2927  004B                     i1l900:
   2928  004B  0020               	movlb	0	; select bank0
   2929  004C  150C               	bsf	12,2	;volatile
-  2930  004D                     i1l897:
+  2930  004D                     i1l902:
   2931                           
   2932                           ;i2c_slave.c: 27:         if(z==0x74) RA3=1;
   2933  004D  3074               	movlw	116
@@ -2952,7 +2952,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2938  0052                     u11_21:
   2939  0052  2855               	goto	i1l57
   2940  0053                     u11_20:
-  2941  0053                     i1l899:
+  2941  0053                     i1l904:
   2942  0053  0020               	movlb	0	; select bank0
   2943  0054  158C               	bsf	12,3	;volatile
   2944  0055                     i1l57:
@@ -2960,20 +2960,65 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2946                           ;i2c_slave.c: 28:         SSP1CON1bits.CKP = 1;
   2947  0055  0023               	movlb	3	; select bank3
   2948  0056  1610               	bsf	16,4	;volatile
-  2949  0057                     i1l47:	
+  2949                           
   2950                           ;i2c_slave.c: 29:     }
-  2951                           
-  2952                           
-  2953                           ;i2c_slave.c: 39:     PIR3bits.SSP1IF = 0;
-  2954  0057  002E               	movlb	14	; select bank14
-  2955  0058  100F               	bcf	15,0	;volatile
-  2956  0059                     i1l58:
-  2957  0059  107E               	bcf	int$flags,0	;clear compiler interrupt flag (level 1)
-  2958  005A  0009               	retfie
-  2959  005B                     __end_of_I2C_Slave_Read:
-  2960  007E                     btemp	set	126	;btemp
-  2961  007E                     int$flags	set	126
-  2962  007E                     wtemp0	set	126
+  2951  0057  286C               	goto	i1l58
+  2952  0058                     i1l47:	
+  2953                           ;i2c_slave.c: 31:     else if(!SSP1STATbits.D_nA && SSP1STATbits.R_nW){
+  2954                           
+  2955  0058  1A8F               	btfsc	15,5	;volatile
+  2956  0059  285B               	goto	u12_21
+  2957  005A  285C               	goto	u12_20
+  2958  005B                     u12_21:
+  2959  005B  286C               	goto	i1l58
+  2960  005C                     u12_20:
+  2961  005C                     i1l906:
+  2962  005C  1D0F               	btfss	15,2	;volatile
+  2963  005D  285F               	goto	u13_21
+  2964  005E  2860               	goto	u13_20
+  2965  005F                     u13_21:
+  2966  005F  286C               	goto	i1l58
+  2967  0060                     u13_20:
+  2968  0060                     i1l908:
+  2969                           
+  2970                           ;i2c_slave.c: 32:         z = SSP1BUF;
+  2971  0060  080C               	movf	12,w	;volatile
+  2972  0061  00F3               	movwf	??_I2C_Slave_Read
+  2973  0062  0873               	movf	??_I2C_Slave_Read,w
+  2974  0063  00F1               	movwf	_z
+  2975  0064                     i1l910:
+  2976                           
+  2977                           ;i2c_slave.c: 33:         SSP1STATbits.BF = 0;
+  2978  0064  100F               	bcf	15,0	;volatile
+  2979                           
+  2980                           ;i2c_slave.c: 34:         SSP1BUF = y;
+  2981  0065  0870               	movf	_y,w
+  2982  0066  008C               	movwf	12	;volatile
+  2983  0067                     i1l912:
+  2984                           
+  2985                           ;i2c_slave.c: 35:         SSP1CON1bits.CKP = 1;
+  2986  0067  1610               	bsf	16,4	;volatile
+  2987  0068                     i1l60:	
+  2988                           ;i2c_slave.c: 36:         while(SSP1STATbits.BF);
+  2989                           
+  2990  0068  180F               	btfsc	15,0	;volatile
+  2991  0069  286B               	goto	u14_21
+  2992  006A  286C               	goto	u14_20
+  2993  006B                     u14_21:
+  2994  006B  2868               	goto	i1l60
+  2995  006C                     u14_20:
+  2996  006C                     i1l58:
+  2997                           
+  2998                           ;i2c_slave.c: 39:     PIR3bits.SSP1IF = 0;
+  2999  006C  002E               	movlb	14	; select bank14
+  3000  006D  100F               	bcf	15,0	;volatile
+  3001  006E                     i1l63:
+  3002  006E  107E               	bcf	int$flags,0	;clear compiler interrupt flag (level 1)
+  3003  006F  0009               	retfie
+  3004  0070                     __end_of_I2C_Slave_Read:
+  3005  007E                     btemp	set	126	;btemp
+  3006  007E                     int$flags	set	126
+  3007  007E                     wtemp0	set	126
 
 Data Sizes:
     Strings     0
@@ -3198,72 +3243,76 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
-Symbol Table                                                                                   Tue Dec 15 10:32:55 2020
+Symbol Table                                                                                   Tue Dec 15 10:56:39 2020
 
                               _n 0072                                _y 0070                                _z 0071  
-                             l13 00CD                               l14 00CD                              l173 00B8  
-                            l182 0095                              l176 00C1                              l185 00AB  
-                            l179 00C9                              l801 006B                              l811 007E  
-                            l803 006D                              l821 00BC                              l813 0080  
-                            l805 0070                              l823 00BD                              l815 0092  
-                            l807 007A                              l831 00A2                              l825 00C0  
-                            l817 0094                              l809 007C                              l841 00A6  
-                            l833 00A3                              l819 00B9                              l843 00A8  
-                            l835 00A4                              l827 0096                              l851 00AF  
-                            l845 00A9                              l837 00A4                              l829 00A1  
-                            l853 00B2                              l847 00AA                              l839 00A5  
-                            l855 00B5                              l849 00AC                              l857 00CA  
-                            l795 00C2                              l797 0064                              l799 0069  
+                             l13 00E2                               l14 00E2                              l181 00D6  
+                            l190 00C0                              l184 00DE                              l178 00CD  
+                            l187 00AA                              l800 00D7                              l810 0085  
+                            l802 0079                              l820 00A7                              l812 008F  
+                            l804 007E                              l830 00D5                              l822 00A9  
+                            l814 0091                              l806 0080                              l824 00CE  
+                            l816 0093                              l808 0082                              l840 00B9  
+                            l832 00AB                              l826 00D1                              l818 0095  
+                            l850 00BE                              l842 00B9                              l834 00B6  
+                            l828 00D2                              l852 00BF                              l844 00BA  
+                            l836 00B7                              l860 00CA                              l846 00BB  
+                            l838 00B8                              l854 00C1                              l862 00DF  
+                            l848 00BD                              l856 00C4                              l858 00C7  
                             _GIE 005F                              _RA0 0060                              _RA1 0061  
                             _RA2 0062                              _RA3 0063          __size_of_PMD_Initialize 0008  
                            _LATA 0016                             _LATB 0017                             _LATC 0018  
                            _PEIE 005E                             _PMD0 0796                             _PMD1 0797  
                            _PMD2 0798                             _PMD3 0799                             _PMD4 079A  
-                           _PMD5 079B                             i1l51 002D                             i1l47 0057  
-                           i1l48 0024                             i1l57 0055                             i1l58 0059  
-                           _WPUA 0F39                             _WPUB 0F44                             _WPUC 0F4F  
-                           _WPUE 0F65                             u1_20 000B                             u1_21 000A  
-                           u2_20 0011                             u2_21 0010                             u3_20 0015  
-                           u3_21 0014                             u4_20 0020                             u4_21 001F  
-                           u5_20 0024                             u5_21 0023                             u6_20 0028  
-                           u6_21 0027                             u7_20 0031                             u7_21 0030  
-                           u8_20 003B                             u8_21 003A                             u9_20 0043  
-                           u9_21 0042                             _main 00CA                             _init 00AC  
-                           btemp 007E                             start 005B   __size_of_OSCILLATOR_Initialize 0009  
-  __end_of_OSCILLATOR_Initialize 00C2                            ?_main 0073                            ?_init 0073  
-                          i1l861 000B                            i1l871 001B                            i1l863 0011  
-                          i1l881 002C                            i1l873 001C                            i1l865 0015  
-                          i1l891 0043                            i1l883 0031                            i1l875 0020  
-                          i1l867 0019                            i1l859 0006                            i1l893 0045  
-                          i1l885 0035                            i1l869 001A                            i1l895 004B  
-                          i1l887 003B                            i1l879 0028                            i1l897 004D  
-                          i1l889 003D                            i1l899 0053                            u10_20 004B  
+                           _PMD5 079B                             i1l51 002D                             i1l60 0068  
+                           i1l47 0058                             i1l63 006E                             i1l48 0024  
+                           i1l57 0055                             i1l58 006C                             _WPUA 0F39  
+                           _WPUB 0F44                             _WPUC 0F4F                             _WPUE 0F65  
+                           u1_20 000B                             u1_21 000A                             u2_20 0011  
+                           u2_21 0010                             u3_20 0015                             u3_21 0014  
+                           u4_20 0020                             u4_21 001F                             u5_20 0024  
+                           u5_21 0023                             u6_20 0028                             u6_21 0027  
+                           u7_20 0031                             u7_21 0030                             u8_20 003B  
+                           u8_21 003A                             u9_20 0043                             u9_21 0042  
+                           _main 00DF                             _init 00C1                             btemp 007E  
+                           start 0070   __size_of_OSCILLATOR_Initialize 0009    __end_of_OSCILLATOR_Initialize 00D7  
+                          ?_main 0073                            ?_init 0073                            i1l900 004B  
+                          i1l910 0064                            i1l902 004D                            i1l912 0067  
+                          i1l904 0053                            i1l906 005C                            i1l908 0060  
+                          i1l870 0015                            i1l880 0020                            i1l872 0019  
+                          i1l864 0006                            i1l890 0035                            i1l874 001A  
+                          i1l866 000B                            i1l892 003B                            i1l884 0028  
+                          i1l876 001B                            i1l868 0011                            i1l894 003D  
+                          i1l886 002C                            i1l878 001C                            i1l896 0043  
+                          i1l888 0031                            i1l898 0045                            u10_20 004B  
                           u10_21 004A                            u11_20 0053                            u11_21 0052  
-                          _OSCEN 0891                            _TRISA 0011                            _TRISB 0012  
+                          _OSCEN 0891                            u12_20 005C                            u12_21 005B  
+                          u13_20 0060                            u13_21 005F                            u14_20 006C  
+                          u14_21 006B                            _TRISA 0011                            _TRISB 0012  
                           _TRISC 0013                            status 0003                            wtemp0 007E  
-                __initialization 005D                     __end_of_main 00D0                     __end_of_init 00B9  
+                __initialization 0072                     __end_of_main 00E5                     __end_of_init 00CE  
                          ??_main 0075                           ??_init 0075                           _ANSELA 0F38  
                          _ANSELB 0F43                           _ANSELC 0F4E                           _RC3PPS 0F23  
                          _RC4PPS 0F24                           _ODCONA 0F3A                           _ODCONB 0F45  
                          _ODCONC 0F50                           _INLVLA 0F3C                           _INLVLB 0F47  
                          _INLVLC 0F52                           _INLVLE 0F68                           _OSCFRQ 0893  
-                 _PMD_Initialize 00C2          __end_of__initialization 0060                   __pcstackCOMMON 0073  
-        __size_of_I2C_Slave_Read 0057           __end_of_PMD_Initialize 00CA                       __pmaintext 00CA  
+                 _PMD_Initialize 00D7          __end_of__initialization 0075                   __pcstackCOMMON 0073  
+        __size_of_I2C_Slave_Read 006C           __end_of_PMD_Initialize 00DF                       __pmaintext 00DF  
                      __pintentry 0004                  ?_PMD_Initialize 0073                          _OSCCON1 088D  
                         _OSCCON3 088F                          _OSCTUNE 0892                          _SSP1ADD 018D  
                         _SLRCONA 0F3B                          _SLRCONB 0F46                          _SLRCONC 0F51  
-                        _SSP1BUF 018C                          _SSP1MSK 018E                          __ptext1 00AC  
-                        __ptext2 0096                          __ptext3 00C2                          __ptext4 0064  
-                        __ptext5 00B9            _OSCILLATOR_Initialize 00B9         ??_PIN_MANAGER_Initialize 0074  
-           end_of_initialization 0060                   _I2C_Slave_Read 0004                       _slave_init 0096  
-         __end_of_I2C_Slave_Read 005B           ?_OSCILLATOR_Initialize 0073              start_initialization 005D  
+                        _SSP1BUF 018C                          _SSP1MSK 018E                          __ptext1 00C1  
+                        __ptext2 00AB                          __ptext3 00D7                          __ptext4 0079  
+                        __ptext5 00CE            _OSCILLATOR_Initialize 00CE         ??_PIN_MANAGER_Initialize 0074  
+           end_of_initialization 0075                   _I2C_Slave_Read 0004                       _slave_init 00AB  
+         __end_of_I2C_Slave_Read 0070           ?_OSCILLATOR_Initialize 0073              start_initialization 0072  
 __size_of_PIN_MANAGER_Initialize 0032                  ?_I2C_Slave_Read 0073                 ??_PMD_Initialize 0074  
                     ?_slave_init 0073                      __pbssCOMMON 0070                        ___latbits 0001  
-         _PIN_MANAGER_Initialize 0064              __size_of_slave_init 0016                         _PIE3bits 0719  
+         _PIN_MANAGER_Initialize 0079              __size_of_slave_init 0016                         _PIE3bits 0719  
                        _PIR3bits 070F                         _SSP1CON1 0190                         _SSP1CON2 0191  
                        _SSP1CON3 0192                         _SSP1STAT 018F          ??_OSCILLATOR_Initialize 0074  
                      _ANSELCbits 0F4E                     _SSP1CON1bits 0190                     _SSP1CON3bits 0192  
                ??_I2C_Slave_Read 0073                    __size_of_main 0006                    __size_of_init 000D  
                        int$flags 007E                     ??_slave_init 0074                     _SSP1STATbits 018F  
-                       intlevel1 0000               __end_of_slave_init 00AC          ?_PIN_MANAGER_Initialize 0073  
-                     _SSP1DATPPS 0EC6                       _SSP1CLKPPS 0EC5   __end_of_PIN_MANAGER_Initialize 0096  
+                       intlevel1 0000               __end_of_slave_init 00C1          ?_PIN_MANAGER_Initialize 0073  
+                     _SSP1DATPPS 0EC6                       _SSP1CLKPPS 0EC5   __end_of_PIN_MANAGER_Initialize 00AB  

@@ -19794,7 +19794,15 @@ void __attribute__((picinterrupt(("")))) I2C_Slave_Read(){
         if(z==0x74) RA3=1;
         SSP1CON1bits.CKP = 1;
     }
-# 39 "i2c_slave.c"
+
+    else if(!SSP1STATbits.D_nA && SSP1STATbits.R_nW){
+        z = SSP1BUF;
+        SSP1STATbits.BF = 0;
+        SSP1BUF = y;
+        SSP1CON1bits.CKP = 1;
+        while(SSP1STATbits.BF);
+    }
+
     PIR3bits.SSP1IF = 0;
     }
 }
