@@ -109,7 +109,7 @@ void slave_init(void){
     SSP1MSK = 0xFF;
     SSP1CON1 = 0x26;
     SSP1CON2 = 0x01;
-    SSP1CON3 = 0x00;
+    SSP1CON3 = 0x00;//看到的資料都不設這個，覺得有點怪
     SSP1CON3bits.BOEN=1;//更新SSP1BUF
     SSP1BUF = 0x00;
     bool n=false;//

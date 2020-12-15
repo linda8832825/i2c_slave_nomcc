@@ -19772,7 +19772,6 @@ _Bool n;
 
 uint8_t z,y;
 void __attribute__((picinterrupt(("")))) I2C_Slave_Read(){
-
     if(PIR3bits.SSP1IF == 1){
         SSP1CON1bits.CKP = 0;
 
@@ -19787,15 +19786,15 @@ void __attribute__((picinterrupt(("")))) I2C_Slave_Read(){
         while(!SSP1STATbits.BF);
         z = SSP1BUF;
         SSP1CON1bits.CKP = 1;
-            while(!SSP1STATbits.BF);
-            y=SSP1BUF;
-            if(y==0xDB) RA0=1;
-            if(y==0x74) RA1=1;
-            if(z==0xDB) RA2=1;
-            if(z==0x74) RA3=1;
-            SSP1CON1bits.CKP = 1;
+        while(!SSP1STATbits.BF);
+        y=SSP1BUF;
+        if(y==0xDB) RA0=1;
+        if(y==0x74) RA1=1;
+        if(z==0xDB) RA2=1;
+        if(z==0x74) RA3=1;
+        SSP1CON1bits.CKP = 1;
     }
-# 40 "i2c_slave.c"
+# 39 "i2c_slave.c"
     PIR3bits.SSP1IF = 0;
     }
 }

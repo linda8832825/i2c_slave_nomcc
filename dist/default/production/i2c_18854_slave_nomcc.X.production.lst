@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
-                                                                                               Tue Dec 15 10:14:43 2020
+                                                                                               Tue Dec 15 10:32:55 2020
 
 Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1 
      1                           	processor	16F18854
@@ -2802,7 +2802,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2788  0005  3180               	pagesel	$
   2789  0006                     i1l859:
   2790                           
-  2791                           ;i2c_slave.c: 9:     if(PIR3bits.SSP1IF == 1){
+  2791                           ;i2c_slave.c: 8:     if(PIR3bits.SSP1IF == 1){
   2792  0006  002E               	movlb	14	; select bank14
   2793  0007  1C0F               	btfss	15,0	;volatile
   2794  0008  280A               	goto	u1_21
@@ -2812,11 +2812,11 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2798  000B                     u1_20:
   2799  000B                     i1l861:
   2800                           
-  2801                           ;i2c_slave.c: 10:         SSP1CON1bits.CKP = 0;
+  2801                           ;i2c_slave.c: 9:         SSP1CON1bits.CKP = 0;
   2802  000B  0023               	movlb	3	; select bank3
   2803  000C  1210               	bcf	16,4	;volatile
   2804                           
-  2805                           ;i2c_slave.c: 12:         if ((SSP1CON1bits.SSPOV) || (SSP1CON1bits.WCOL)){
+  2805                           ;i2c_slave.c: 11:         if ((SSP1CON1bits.SSPOV) || (SSP1CON1bits.WCOL)){
   2806  000D  1B10               	btfsc	16,6	;volatile
   2807  000E  2810               	goto	u2_21
   2808  000F  2811               	goto	u2_20
@@ -2832,26 +2832,26 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2818  0015                     u3_20:
   2819  0015                     i1l865:
   2820                           
-  2821                           ;i2c_slave.c: 13:             z = SSP1BUF;
+  2821                           ;i2c_slave.c: 12:             z = SSP1BUF;
   2822  0015  080C               	movf	12,w	;volatile
   2823  0016  00F3               	movwf	??_I2C_Slave_Read
   2824  0017  0873               	movf	??_I2C_Slave_Read,w
   2825  0018  00F1               	movwf	_z
   2826  0019                     i1l867:
   2827                           
-  2828                           ;i2c_slave.c: 14:             SSP1CON1bits.SSPOV = 0;
+  2828                           ;i2c_slave.c: 13:             SSP1CON1bits.SSPOV = 0;
   2829  0019  1310               	bcf	16,6	;volatile
   2830  001A                     i1l869:
   2831                           
-  2832                           ;i2c_slave.c: 15:             SSP1CON1bits.WCOL = 0;
+  2832                           ;i2c_slave.c: 14:             SSP1CON1bits.WCOL = 0;
   2833  001A  1390               	bcf	16,7	;volatile
   2834  001B                     i1l871:
   2835                           
-  2836                           ;i2c_slave.c: 16:             SSP1CON1bits.CKP = 1;
+  2836                           ;i2c_slave.c: 15:             SSP1CON1bits.CKP = 1;
   2837  001B  1610               	bsf	16,4	;volatile
   2838  001C                     i1l873:
   2839                           
-  2840                           ;i2c_slave.c: 19:     if(!SSP1STATbits.D_nA && !SSP1STATbits.R_nW){
+  2840                           ;i2c_slave.c: 18:     if(!SSP1STATbits.D_nA && !SSP1STATbits.R_nW){
   2841  001C  1A8F               	btfsc	15,5	;volatile
   2842  001D  281F               	goto	u4_21
   2843  001E  2820               	goto	u4_20
@@ -2874,17 +2874,17 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2860  0028                     u6_20:
   2861  0028                     i1l879:
   2862                           
-  2863                           ;i2c_slave.c: 21:         z = SSP1BUF;
+  2863                           ;i2c_slave.c: 20:         z = SSP1BUF;
   2864  0028  080C               	movf	12,w	;volatile
   2865  0029  00F3               	movwf	??_I2C_Slave_Read
   2866  002A  0873               	movf	??_I2C_Slave_Read,w
   2867  002B  00F1               	movwf	_z
   2868  002C                     i1l881:
   2869                           
-  2870                           ;i2c_slave.c: 22:         SSP1CON1bits.CKP = 1;
+  2870                           ;i2c_slave.c: 21:         SSP1CON1bits.CKP = 1;
   2871  002C  1610               	bsf	16,4	;volatile
   2872  002D                     i1l51:	
-  2873                           ;i2c_slave.c: 23:             while(!SSP1STATbits.BF);
+  2873                           ;i2c_slave.c: 22:         while(!SSP1STATbits.BF);
   2874                           
   2875  002D  1C0F               	btfss	15,0	;volatile
   2876  002E  2830               	goto	u7_21
@@ -2894,14 +2894,14 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2880  0031                     u7_20:
   2881  0031                     i1l883:
   2882                           
-  2883                           ;i2c_slave.c: 24:             y=SSP1BUF;
+  2883                           ;i2c_slave.c: 23:         y=SSP1BUF;
   2884  0031  080C               	movf	12,w	;volatile
   2885  0032  00F3               	movwf	??_I2C_Slave_Read
   2886  0033  0873               	movf	??_I2C_Slave_Read,w
   2887  0034  00F0               	movwf	_y
   2888  0035                     i1l885:
   2889                           
-  2890                           ;i2c_slave.c: 25:             if(y==0xDB) RA0=1;
+  2890                           ;i2c_slave.c: 24:         if(y==0xDB) RA0=1;
   2891  0035  30DB               	movlw	219
   2892  0036  0670               	xorwf	_y,w
   2893  0037  1D03               	btfss	3,2
@@ -2915,7 +2915,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2901  003C  140C               	bsf	12,0	;volatile
   2902  003D                     i1l889:
   2903                           
-  2904                           ;i2c_slave.c: 26:             if(y==0x74) RA1=1;
+  2904                           ;i2c_slave.c: 25:         if(y==0x74) RA1=1;
   2905  003D  3074               	movlw	116
   2906  003E  0670               	xorwf	_y,w
   2907  003F  1D03               	btfss	3,2
@@ -2929,7 +2929,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2915  0044  148C               	bsf	12,1	;volatile
   2916  0045                     i1l893:
   2917                           
-  2918                           ;i2c_slave.c: 27:             if(z==0xDB) RA2=1;
+  2918                           ;i2c_slave.c: 26:         if(z==0xDB) RA2=1;
   2919  0045  30DB               	movlw	219
   2920  0046  0671               	xorwf	_z,w
   2921  0047  1D03               	btfss	3,2
@@ -2943,7 +2943,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2929  004C  150C               	bsf	12,2	;volatile
   2930  004D                     i1l897:
   2931                           
-  2932                           ;i2c_slave.c: 28:             if(z==0x74) RA3=1;
+  2932                           ;i2c_slave.c: 27:         if(z==0x74) RA3=1;
   2933  004D  3074               	movlw	116
   2934  004E  0671               	xorwf	_z,w
   2935  004F  1D03               	btfss	3,2
@@ -2957,14 +2957,14 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2943  0054  158C               	bsf	12,3	;volatile
   2944  0055                     i1l57:
   2945                           
-  2946                           ;i2c_slave.c: 29:             SSP1CON1bits.CKP = 1;
+  2946                           ;i2c_slave.c: 28:         SSP1CON1bits.CKP = 1;
   2947  0055  0023               	movlb	3	; select bank3
   2948  0056  1610               	bsf	16,4	;volatile
   2949  0057                     i1l47:	
-  2950                           ;i2c_slave.c: 30:     }
+  2950                           ;i2c_slave.c: 29:     }
   2951                           
   2952                           
-  2953                           ;i2c_slave.c: 40:     PIR3bits.SSP1IF = 0;
+  2953                           ;i2c_slave.c: 39:     PIR3bits.SSP1IF = 0;
   2954  0057  002E               	movlb	14	; select bank14
   2955  0058  100F               	bcf	15,0	;volatile
   2956  0059                     i1l58:
@@ -3198,7 +3198,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
-Symbol Table                                                                                   Tue Dec 15 10:14:43 2020
+Symbol Table                                                                                   Tue Dec 15 10:32:55 2020
 
                               _n 0072                                _y 0070                                _z 0071  
                              l13 00CD                               l14 00CD                              l173 00B8  
